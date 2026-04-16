@@ -1,0 +1,135 @@
+/* --- Core Tokens (Monochrome & Shadcn) --- */
+:host {
+  display: block;
+  font-family: 'Inter', -apple-system, system-ui, sans-serif;
+  --radius: 0.5rem;
+  --border: #e4e4e7;
+  --foreground: #09090b;
+  --muted-foreground: #71717a;
+  --ring: #18181b;
+}
+
+/* Card Structure */
+.ui-card {
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: 0.75rem; /* Softer radius for the card */
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  max-width: 440px;
+  margin: 3rem auto;
+}
+
+.ui-card-header {
+  padding: 1.5rem 1.5rem 1rem;
+  border-bottom: 1px solid var(--border);
+  background-color: #fafafa;
+}
+
+.ui-card-content {
+  padding: 1.5rem;
+}
+
+/* Typography */
+.ui-heading {
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  color: var(--foreground);
+  margin: 0 0 0.5rem;
+}
+
+.ui-subtext {
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Form Layout (Vertical Stacking) */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #18181b;
+}
+
+/* Inputs */
+input {
+  width: 100%;
+  padding: 0.625rem 0.875rem;
+  font-size: 0.875rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: #ffffff;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--ring);
+  box-shadow: 0 0 0 2px rgba(24, 24, 27, 0.05);
+}
+
+/* Validation */
+.ui-error-text {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #ef4444;
+  margin-top: 0.25rem;
+}
+
+/* Buttons - Monochrome Pill Shape */
+.action-area {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.ui-btn-pill-black {
+  background-color: #09090b; /* Solid Black */
+  color: #ffffff;
+  border: 1px solid #09090b;
+  border-radius: 9999px; /* Pill */
+  padding: 0.75rem 1.75rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.ui-btn-pill-black:hover:not(:disabled) {
+  background-color: #27272a; /* Dark Gray */
+}
+
+.ui-btn-pill-black:disabled {
+  background-color: #a1a1aa; /* Light Gray for disabled */
+  border-color: #a1a1aa;
+  cursor: not-allowed;
+  opacity: 0.8;
+}
+
+.ui-btn-link {
+  background: none;
+  border: none;
+  color: #71717a;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0.5rem;
+  transition: color 0.2s;
+}
+
+.ui-btn-link:hover {
+  color: #09090b;
+  text-decoration: underline;
+}

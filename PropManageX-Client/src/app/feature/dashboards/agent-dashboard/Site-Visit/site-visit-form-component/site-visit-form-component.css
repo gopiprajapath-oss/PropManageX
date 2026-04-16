@@ -1,0 +1,19 @@
+form {
+  width: 400px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+ 
+input, textarea {
+  padding: 8px;
+}
+ 
+button {
+  padding: 10px;
+  background: blue;
+  color: white;
+  border: none;
+}
+ 

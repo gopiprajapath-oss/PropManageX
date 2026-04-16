@@ -1,0 +1,76 @@
+<div class="container py-5">
+  <div class="row justify-content-center">
+    <div class="col-12 col-md-8 col-lg-6">
+      
+      <section class="ui-card">
+        <div class="ui-card-header">
+          <h3 class="ui-heading">Update Maintenance Request</h3>
+          <p class="ui-subtext">Modify the details and status for request #{{ requestId() }}.</p>
+        </div>
+
+        <div class="ui-card-content">
+          @if (error()) {
+            <div class="ui-alert ui-alert-destructive mb-4 d-flex align-items-center">
+              <span class="me-2">⚠️</span> {{ error() }}
+            </div>
+          }
+
+          <form [formGroup]="form" (ngSubmit)="saveMaintenanceEdit()" class="d-flex flex-column gap-4">
+            
+            <div class="form-group space-y-2">
+              <label class="ui-label">Category</label>
+              <input type="text" 
+                     class="ui-input ui-focus-ring" 
+                     formControlName="category" 
+                     placeholder="e.g. Plumbing, Electrical">
+            </div>
+
+            <div class="row g-3">
+              <div class="col-12 col-sm-6 space-y-2">
+                <label class="ui-label">Priority Level</label>
+                <div class="position-relative">
+                  <select class="ui-select ui-focus-ring" formControlName="priority">
+                    <option value="Low">Low</option>
+                    <option value="Medium">Medium</option>
+                    <option value="High">High</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="col-12 col-sm-6 space-y-2">
+                <label class="ui-label">Request Status</label>
+                <div class="position-relative">
+                  <select class="ui-select ui-focus-ring" formControlName="status">
+                    <option value="Open">Open</option>
+                    <option value="InProgress">In Progress</option>
+                    <option value="Completed">Completed</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-actions d-flex gap-2 pt-4 mt-2">
+  <button type="submit" 
+          class="ui-btn ui-btn-primary" 
+          [disabled]="isLoading() || form.invalid">
+    @if (isLoading()) {
+      Saving...
+    } @else {
+      Save Changes
+    }
+  </button>
+  
+  <button type="button" 
+          class="ui-btn ui-btn-outline" 
+          (click)="cancel()">
+    Cancel
+  </button>
+</div>
+            
+          </form>
+        </div>
+      </section>
+
+    </div>
+  </div>
+</div>

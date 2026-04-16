@@ -1,0 +1,41 @@
+.unit-container {
+  padding: 20px;
+}
+ 
+.unit-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+ 
+.unit-table th {
+  background-color: #0b1b34;
+  color: white;
+  padding: 10px;
+  text-align: left;
+}
+ 
+.unit-table td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+ 
+.unit-table tr:hover {
+  background-color: #f5f5f5;
+}
+ 
+.edit-btn {
+  background-color: #0b1b34;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+ 
+.no-data {
+  text-align: center;
+  padding: 20px;
+  color: gray;
+}
+ 

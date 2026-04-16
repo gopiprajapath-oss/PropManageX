@@ -1,0 +1,84 @@
+/* Container */
+.property-container {
+  padding: 20px;
+}
+ 
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+ 
+h2 {
+  font-weight: 600;
+  color: #09090b;
+}
+ 
+/* Button */
+.ui-btn {
+  background-color: #09090b;
+  color: #ffffff;
+  border: 1px solid #09090b;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.2s;
+}
+ 
+.ui-btn:hover {
+  background-color: #ffffff;
+  color: #09090b;
+}
+ 
+/* Table */
+.table-wrapper {
+  border: 1px solid #e4e4e7;
+  border-radius: 12px;
+  overflow: hidden;
+}
+ 
+.ui-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+ 
+/* Header */
+.ui-table thead {
+  background-color: #f4f4f5;
+}
+ 
+.ui-table th {
+  text-align: left;
+  padding: 12px;
+  font-weight: 500;
+  color: #71717a;
+  border-bottom: 1px solid #e4e4e7;
+}
+ 
+/* Body */
+.ui-table td {
+  padding: 12px;
+  border-bottom: 1px solid #e4e4e7;
+}
+ 
+/* Row hover */
+.ui-table tbody tr:hover {
+  background-color: #f9f9f9;
+}
+ 
+/* Status */
+.status {
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  border: 1px solid #e4e4e7;
+}
+ 
+/* Loading */
+.loading {
+  color: #71717a;
+}
+ 

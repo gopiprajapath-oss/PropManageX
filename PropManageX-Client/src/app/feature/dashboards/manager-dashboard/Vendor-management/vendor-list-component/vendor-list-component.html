@@ -1,0 +1,57 @@
+<section class="ui-card" style="margin-top: 2rem;">
+  <div class="ui-card-header">
+    <h3 class="ui-heading">Active Vendor Assignments</h3>
+  </div>
+
+  <div class="ui-card-content">
+    @if (error()) {
+      <div class="ui-alert ui-alert-error">{{ error() }}</div>
+    }
+
+    @if (isLoading()) {
+      <div class="loading-state">
+        <p>Loading vendor assignments...</p>
+      </div>
+    } @else {
+      <table class="ui-table">
+        <thead>
+          <tr>
+            <th>Assignment ID</th>
+            <th>Request ID</th>
+            <th>Vendor Name</th>
+            <th>Completion Date</th>
+            <th>Cost</th>
+            <th>Status Action</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (assign of vendorAssignments(); track assign.assignmentID) {
+            <tr>
+            <td>{{ assign.assignmentID }}</td>
+              <td>Ticket:{{ assign.requestID }}</td>
+              <td>{{ assign.vendorName }}</td>
+              <td>{{ assign.assignedDate | date:'MMM d, yyyy' }}</td>
+              <td>{{ assign.cost | currency:'INR' }}</td>
+              <td>
+                <select
+                  class="ui-select"
+                  [disabled]="getVendorDisplayStatus(assign) === 'Completed'"
+                  [ngModel]="getVendorDisplayStatus(assign)"
+                  (ngModelChange)="handleVendorStatusChange(assign, $event)"
+                >
+                  <option value="Dispatched">Dispatched</option>
+                  <option value="Completed">Completed</option>
+                </select>
+              </td>
+              <td class="row-actions">
+                <button class="ui-btn-outline ui-btn-sm" (click)="startEditAssignment(assign)">Update</button>
+                <button class="ui-btn-danger ui-btn-sm" (click)="deleteAssignment(assign)">Delete</button>
+              </td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    }
+  </div>
+</section>

@@ -1,0 +1,28 @@
+.deal-container {
+  padding: 20px;
+}
+ 
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+ 
+button {
+  background-color: navy;
+  color: white;
+  padding: 8px 14px;
+  border: none;
+  cursor: pointer;
+}
+ 
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+ 
+th, td {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+ 

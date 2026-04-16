@@ -1,0 +1,22 @@
+<h2>{{ isEditMode ? 'Edit Site Visit' : 'Add Site Visit' }}</h2>
+ 
+<form [formGroup]="form" (ngSubmit)="submit()">
+ 
+  <label>Lead ID</label>
+  <input type="number" formControlName="leadID" />
+ 
+  <label>Visit Date</label>
+  <input type="datetime-local" formControlName="visitDate" />
+ 
+  <label>Agent ID</label>
+  <input type="number" formControlName="agentID" />
+ 
+  <label>Notes</label>
+  <textarea formControlName="notes"></textarea>
+ 
+  <button type="submit">
+    {{ isEditMode ? 'Update Visit' : 'Add Visit' }}
+  </button>
+ 
+</form>
+ 

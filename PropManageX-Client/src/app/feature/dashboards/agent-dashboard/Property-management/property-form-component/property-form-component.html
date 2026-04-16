@@ -1,0 +1,60 @@
+<div class="form-container">
+  <div class="ui-card">
+
+    <!-- Title -->
+    <h2 class="title">
+      Update Property
+    </h2>
+
+    <!-- Form -->
+    <form [formGroup]="form" (ngSubmit)="submit()" class="form-grid">
+
+      <!-- Name -->
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input id="name" type="text" formControlName="name" class="ui-input" />
+      </div>
+
+      <!-- Type -->
+      <div class="form-group">
+        <label for="type">Type</label>
+        <input id="type" type="text" formControlName="type" class="ui-input" />
+      </div>
+
+      <!-- Location -->
+      <div class="form-group">
+        <label for="location">Location</label>
+        <input id="location" type="text" formControlName="location" class="ui-input" />
+      </div>
+
+      <!-- Total Units -->
+      <div class="form-group">
+        <label for="totalUnits">Total Units</label>
+        <input id="totalUnits" type="number" formControlName="totalUnits" class="ui-input" />
+      </div>
+
+      <!-- Status (editable only) -->
+      <div class="form-group">
+        <label for="status">Status</label>
+        <select id="status" formControlName="status" class="ui-input">
+          <option value="">Select</option>
+          <option value="Available">Available</option>
+          <option value="Sold">Sold</option>
+          <option value="Active">Active</option>
+        </select>
+      </div>
+
+      <!-- Actions -->
+      <div class="form-actions">
+        <button type="submit" class="ui-button" [disabled]="loading()">
+          @if (loading()) {
+            Saving...
+          } @else {
+            Update Status
+          }
+        </button>
+      </div>
+
+    </form>
+  </div>
+</div>

@@ -1,0 +1,58 @@
+<div class="unit-container">
+ 
+  <h2>Units</h2>
+
+  <!-- <p>Total Units:{{units.length}}</p>
+  <p>{{units | json}}</p> -->
+ 
+  <table class="unit-table">
+ 
+    <thead>
+      <tr>
+        <th>Unit No</th>
+        <th>Area (SqFt)</th>
+        <th>Bedrooms</th>
+        <th>Price</th>
+        <th>Status</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+ 
+    <tbody>
+ 
+      <!-- ✅ DATA ROW -->
+      <tr *ngFor="let unit of units">
+        <td>{{ unit.unitNumber }}</td>
+        <td>{{ unit.areaSqFt }}</td>
+        <td>{{ unit.bedroomCount }}</td>
+        <td>{{ unit.basePrice }}</td>
+        <td>{{ unit.status }}</td>
+ 
+        <td>
+          <button 
+            class="edit-btn"
+            [routerLink]="['/agent-dashboard/edit-unit', unit.unitID]">
+            Edit
+          </button>
+        </td>
+ 
+      </tr>
+
+      <!-- <tr *ngIf="units.length === 0">
+      <td colspan="6">No units found</td>
+
+      </tr>
+ 
+       ✅ EMPTY STATE
+      <tr *ngIf="units && units.length === 0">
+        <td colspan="6" style="text-align:center; padding:10px;">
+          No Units Found
+        </td>
+      </tr> -->
+ 
+    </tbody>
+ 
+  </table>
+ 
+</div>
+ 

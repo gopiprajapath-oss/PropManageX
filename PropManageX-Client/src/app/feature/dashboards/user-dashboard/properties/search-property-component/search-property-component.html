@@ -1,0 +1,95 @@
+<div class="search-page-container">
+  
+  <div class="search-header">
+    <h2>Find Your Next Home</h2>
+    <p class="text-muted">Search through thousands of verified properties.</p>
+
+    <form [formGroup]="searchForm" (ngSubmit)="onSearch()" class="search-form-card">
+      
+      <div class="form-group">
+        <label for="query">Search</label>
+        <input 
+          id="query" 
+          type="text" 
+          formControlName="query" 
+          placeholder="Property name or keyword..." 
+          class="ui-input"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="location">Location</label>
+        <select id="location" formControlName="location" class="ui-select">
+          <option value="">All Locations</option>
+          @for (loc of locations; track loc) {
+            <option [value]="loc">{{ loc }}</option>
+          }
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="type">Property Type</label>
+        <select id="type" formControlName="type" class="ui-select">
+          <option value="">All Types</option>
+          @for (type of propertyTypes; track type) {
+            <option [value]="type">{{ type }}</option>
+          }
+        </select>
+      </div>
+
+      <div class="form-actions">
+        <button type="submit" class="btn-primary" [disabled]="isLoading()">
+          @if (isLoading()) {
+            Searching...
+          } @else {
+            Search
+          }
+        </button>
+        <button type="button" class="btn-secondary" (click)="resetFilters()">Reset</button>
+      </div>
+    </form>
+  </div>
+
+  <div class="results-container">
+    <div class="results-header">
+      <h3>Search Results</h3>
+      <span class="badge">{{ properties().length }} Properties Found</span>
+    </div>
+
+    @if (isLoading()) {
+      <div class="loading-state">
+        <p>Loading properties...</p>
+      </div>
+    } @else {
+      <div class="property-grid">
+        @for (p of properties(); track p.propertyID) {
+          <div class="property-card" (click)="goToDetails(p.propertyID)">
+            
+            <div class="card-image-container">
+              <!-- <img [ngSrc]="p.image!" alt="Property" width="400" height="250" priority class="property-img"> -->
+              <span class="status-badge" [class.available]="p.status === 'Available'">{{ p.status }}</span>
+            </div>
+
+            <div class="card-content">
+              <h4>{{ p.name }}</h4>
+              <p class="location text-muted">📍 {{ p.location }}</p>
+              
+              <div class="card-footer">
+                <span class="type-badge">{{ p.type }}</span>
+                @if (p.price) {
+                  <span class="price">${{ p.price | number }}</span>
+                }
+              </div>
+            </div>
+          </div>
+        } @empty {
+          <div class="empty-state">
+            <p>No properties match your current filters.</p>
+            <button class="btn-secondary" (click)="resetFilters()">Clear Filters</button>
+          </div>
+        }
+      </div>
+    }
+  </div>
+
+</div>

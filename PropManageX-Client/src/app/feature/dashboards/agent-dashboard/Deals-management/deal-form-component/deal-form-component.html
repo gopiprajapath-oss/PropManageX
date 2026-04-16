@@ -1,0 +1,34 @@
+<div class="form-container">
+  <h2>{{ isEditMode ? 'Edit Deal' : 'Add Deal' }}</h2>
+ 
+  <form [formGroup]="form" (ngSubmit)="submit()">
+    <label>Lead ID</label>
+    <input type="number" placeholder="Lead ID" formControlName="leadID" />
+
+    <label>Unit ID</label>
+    <input type="number" placeholder="Unit ID" formControlName="unitID" />
+
+    <label>Deal Type</label>
+    <select formControlName="dealType">
+      <option value="Buy">Buy</option>
+      <option value="Sale">Sale</option>
+    </select>
+ 
+    <label>Agreed Amount</label>
+    <input type="number" placeholder="Amount" formControlName="agreedValue" />
+ 
+    <label>expected Closure Date</label>
+    <input type="date" formControlName="expectedClosureDate" />
+ 
+    <label>Status</label>
+    <select formControlName="status">
+      <option value="Open">Open</option>
+      <option value="Negotiating">Negotiating</option>
+      <option value="Booked">Booked</option>
+    </select>
+ 
+    <button type="submit">Save Deal</button>
+ 
+  </form>
+</div>
+ 

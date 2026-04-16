@@ -1,0 +1,57 @@
+<section class="ui-card" style="margin-top: 2rem;">
+  <div class="ui-card-header" style="display: flex; justify-content: space-between; align-items: center;">
+    <div>
+      <h3 class="ui-heading m-0">Property Portfolio</h3>
+      <p class="ui-subtext text-xs mt-1">Manage your properties, units, and amenities.</p>
+    </div>
+    <button class="ui-btn-primary" (click)="addProperty()">Add Property</button>
+  </div>
+
+  <div class="ui-card-content">
+    @if (properties().length === 0) {
+      <div class="loading-state">No properties found in the system.</div>
+    } @else {
+      <table class="ui-table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Location</th>
+            <th>Total Units</th>
+            <th>Status</th>
+            <th>Actions</th>
+            <th>Inventory</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          @for (property of properties(); track property.propertyID) {
+            <tr>
+              <td>#{{ property.propertyID }}</td>
+              <td style="font-weight: 500; color: #09090b;">{{ property.name }}</td>
+              <td>{{ property.type }}</td>
+              <td>{{ property.location }}</td>
+              <td>{{ property.totalUnits }}</td>
+              <td>
+                <span class="ui-badge" 
+                      [class.ui-badge-active]="property.status === 'Active' || property.status === 'Available'"
+                      [class.ui-badge-expired]="property.status === 'Inactive' || property.status === 'Sold'">
+                  {{ property.status }}
+                </span>
+              </td>
+              <td class="row-actions">
+                <button class="ui-btn-outline ui-btn-sm" (click)="editProperty(property.propertyID)">Edit</button>
+                <button class="ui-btn-danger ui-btn-sm" (click)="deleteProperty(property.propertyID)">Delete</button>
+              </td>
+              <td class="row-actions">
+                <button class="ui-btn-outline ui-btn-sm" [routerLink]="['/admin-dashboard/properties', property.propertyID, 'units']">Units</button>
+                <button class="ui-btn-outline ui-btn-sm" [routerLink]="['/admin-dashboard/properties', property.propertyID, 'amenities']">Amenities</button>
+              </td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    }
+  </div>
+</section>

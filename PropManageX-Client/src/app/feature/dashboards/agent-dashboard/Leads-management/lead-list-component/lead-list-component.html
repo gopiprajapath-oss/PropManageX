@@ -1,0 +1,50 @@
+<div class="lead-container">
+ 
+  <div class="header">
+    <h2>Leads</h2>
+    <button routerLink="/agent-dashboard/add-lead" class="btn-add">
+      + Add Lead
+    </button>
+  </div>
+ 
+  <table class="lead-table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Property</th>
+        <th>Customer</th>
+        <th>Contact</th>
+        <th>Interest</th>
+        <th>Date</th>
+        <th>Status</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+ 
+    <tbody>
+      <tr *ngFor="let lead of leads()">
+        <td>{{ lead.leadID }}</td>
+        <td>{{ lead.propertyID }}</td>
+        <td>{{ lead.customerName }}</td>
+        <td>{{ lead.contactInfo }}</td>
+        <td>{{ lead.interestType }}</td>
+        <td>{{ lead.createdDate | date:'short' }}</td>
+        <td>
+          <span class="status" [ngClass]="lead.status.toLowerCase()">
+            {{ lead.status }}
+          </span>
+        </td>
+        <td>
+          <button 
+            [routerLink]="['/agent-dashboard/edit-lead', lead.leadID]" 
+            class="btn-edit">
+            Edit
+          </button>
+
+        </td>
+      </tr>
+    </tbody>
+  </table>
+ 
+</div>
+ 

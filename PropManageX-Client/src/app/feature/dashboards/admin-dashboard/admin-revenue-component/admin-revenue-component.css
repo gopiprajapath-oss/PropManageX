@@ -1,0 +1,192 @@
+/* Container & Headers */
+.ui-container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: 'Inter', -apple-system, sans-serif;
+  color: hsl(240 10% 3.9%);
+  animation: fadeIn 0.4s ease-out;
+}
+
+.page-header {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid hsl(240 5.9% 90%);
+}
+
+.page-title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  letter-spacing: -0.05em;
+  margin: 0;
+}
+
+.page-subtext {
+  color: hsl(240 3.8% 46.1%);
+  font-size: 0.875rem;
+  margin-top: 4px;
+}
+
+/* Buttons */
+.ui-btn-primary {
+  background-color: hsl(240 5.9% 10%);
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.ui-btn-primary:hover {
+  opacity: 0.9;
+}
+
+.ui-btn-ghost {
+  background-color: transparent;
+  border: 1px solid hsl(240 5.9% 90%);
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.ui-btn-ghost:hover {
+  background-color: hsl(240 4.8% 95.9%);
+}
+
+/* Card & Table Setup */
+.ui-card {
+  background: #fff;
+  border: 1px solid hsl(240 5.9% 90%);
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  overflow: hidden;
+}
+
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.ui-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+  text-align: left;
+}
+
+.ui-table th {
+  padding: 0.75rem 1.5rem;
+  font-weight: 500;
+  color: hsl(240 3.8% 46.1%);
+  border-bottom: 1px solid hsl(240 5.9% 90%);
+  background: hsl(240 4.8% 95.9%);
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+}
+
+.ui-table td {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid hsl(240 5.9% 90%);
+  vertical-align: middle;
+}
+
+.ui-table tr:hover {
+  background-color: hsl(240 4.8% 95.9% / 0.5);
+}
+
+/* Table Cell Formatting */
+.muted-cell {
+  color: hsl(240 3.8% 46.1%);
+  font-family: ui-monospace, monospace;
+}
+
+.font-medium {
+  font-weight: 500;
+}
+
+.scope-badge {
+  background: hsl(240 4.8% 95.9%);
+  padding: 0.25rem 0.6rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: hsl(240 5.9% 10%);
+}
+
+/* Metric Pills */
+.metrics-cell {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.metric-pill {
+  font-size: 0.75rem;
+  background: white;
+  border: 1px solid hsl(240 5.9% 90%);
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+.metric-pill .lbl {
+  color: hsl(240 3.8% 46.1%);
+  font-weight: 500;
+}
+
+/* Action Buttons (Edit / Delete) */
+.action-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0.4rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  margin-left: 0.25rem;
+  transition: all 0.2s;
+}
+
+.edit-btn:hover { background-color: #e0f2fe; }
+.delete-btn:hover { background-color: #fee2e2; }
+
+/* States (Loading, Error, Empty) */
+.loading-state, .error-state, .empty-state {
+  padding: 4rem 2rem;
+  text-align: center;
+  color: hsl(240 3.8% 46.1%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.spinner {
+  width: 24px;
+  height: 24px;
+  border: 3px solid hsl(240 5.9% 90%);
+  border-top-color: hsl(240 5.9% 10%);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+.error-icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.error-text {
+  color: hsl(0 84.2% 60.2%);
+  font-weight: 500;
+}
+
+.mt-4 { margin-top: 1rem; }
+
+@keyframes spin { to { transform: rotate(360deg); } }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: translateY(0); } }

@@ -1,0 +1,23 @@
+<form [formGroup]="form" (ngSubmit)="submit()">
+  
+  <div class="form-group">
+    <label>Amenity Name</label>
+    <input type="text" formControlName="name" placeholder="Enter name" />
+  </div>
+  
+  <div class="form-group">
+    <label>Description</label>
+    <input type="text" formControlName="description" placeholder="Enter details" />
+  </div>
+
+  <button type="submit" 
+          class="ui-btn-submit" 
+          [class.is-loading]="loading()">
+    @if (loading()) {
+      <span>Processing...</span>
+    } @else {
+      {{ isEditMode ? 'Update Amenity' : 'Add Amenity' }}
+    }
+  </button>
+  
+</form>

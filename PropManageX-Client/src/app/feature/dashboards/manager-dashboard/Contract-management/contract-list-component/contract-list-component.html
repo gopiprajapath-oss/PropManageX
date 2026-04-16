@@ -1,0 +1,55 @@
+<section class="ui-card" style="margin-top: 2rem;">
+  <div class="ui-card-header p-4 border-bottom">
+    <h3 class="ui-heading m-0">Contract Overview</h3>
+  </div>
+
+  <div class="ui-card-content p-4">
+    @if (error()) {
+      <div class="ui-alert ui-alert-error">{{ error() }}</div>
+    }
+
+    @if (isLoading()) {
+      <div class="loading-state">Loading contract data...</div>
+    } @else if (contracts().length === 0) {
+      <div class="loading-state">No contracts found in the system.</div>
+    } @else {
+      <table class="ui-table">
+        <thead>
+          <tr>
+            <th>Contract ID</th>
+            <th>Type</th>
+            <th>Start Date</th>
+            <th>End Date</th>
+            <th>Value</th>
+            <th>Status</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          @for (c of contracts(); track c.contractID) {
+            <tr>
+              <td>#{{ c.contractID }}</td>
+              <td>{{ c.contractType || 'N/A' }}</td>
+              <td>{{ c.startDate | date }}</td>
+              <td>{{ c.endDate | date }}</td>
+              <td>{{ c.contractValue | currency: 'INR' }}</td>
+              <td>
+                <span class="ui-badge" 
+                      [class.ui-badge-expired]="c.status === 'Expired'"
+                      [class.ui-badge-active]="c.status === 'Active'">
+                  {{ c.status }}
+                </span>
+              </td>
+              <td class="row-actions">
+                @if (c.status === 'Expired') {
+                  <button class="ui-btn-outline ui-btn-sm" (click)="startRenewal(c)">Renew</button>
+                }
+              </td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    }
+  </div>
+</section>

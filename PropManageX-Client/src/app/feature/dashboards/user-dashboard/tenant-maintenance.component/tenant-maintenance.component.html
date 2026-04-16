@@ -1,0 +1,133 @@
+<div class="page-container">
+  
+  <div class="page-header">
+    <div class="header-titles">
+      <h2>Maintenance Requests</h2>
+      <p class="text-muted">Track and manage your property repairs and issues.</p>
+    </div>
+    <button class="btn btn-primary" (click)="openForm()">+ Raise Request</button>
+  </div>
+
+  <div class="ui-card table-container">
+    <table class="request-table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Category</th>
+          <th>Description</th>
+          <th>Priority</th>
+          <th>Status</th>
+          <th>Date Raised</th>
+        </tr>
+      </thead>
+      <tbody>
+        @if (isLoading()) {
+          <tr><td colspan="6" class="text-center py-8 text-muted">Loading your requests...</td></tr>
+        } @else {
+          @for (req of requests(); track req.requestID) {
+            <tr>
+              <td class="font-medium">#{{ req.requestID }}</td>
+              <td>{{ req.category }}</td>
+              <td class="description-cell">{{ req.description }}</td>
+              
+              <td>
+                <span class="badge" 
+                  [class.priority-high]="req.priority.toLowerCase() === 'high'"
+                  [class.priority-medium]="req.priority.toLowerCase() === 'medium'"
+                  [class.priority-low]="req.priority.toLowerCase() === 'low'">
+                  {{ req.priority }}
+                </span>
+              </td>
+
+              <td>
+                <span class="badge" 
+                  [class.status-open]="req.status.toLowerCase() === 'open'"
+                  [class.status-assigned]="req.status.toLowerCase() === 'assigned'"
+                  [class.status-completed]="req.status.toLowerCase() === 'completed'">
+                  {{ req.status }}
+                </span>
+              </td>
+              
+              <td class="text-muted">{{ req.raisedDate | date:'dd MMM yyyy, h:mm a' }}</td>
+            </tr>
+          } @empty {
+            <tr>
+              <td colspan="6" class="text-center py-8 empty-state">
+                <div style="font-size: 24px; margin-bottom: 8px;">🛠️</div>
+                No maintenance requests found. You're all caught up!
+              </td>
+            </tr>
+          }
+        }
+      </tbody>
+    </table>
+  </div>
+
+</div>
+
+@if (showForm()) {
+  <div class="modal-backdrop" (click)="closeForm()"></div>
+  <div class="modal">
+    <div class="modal-content ui-card">
+      
+      <div class="modal-header">
+        <h3>Raise a New Request</h3>
+        <button class="close-btn" (click)="closeForm()">×</button>
+      </div>
+
+      <form [formGroup]="form" (ngSubmit)="submit()" class="form-vertical">
+        
+       <div class="form-group">
+          <label>Select Unit</label>
+          <select formControlName="unitID" class="ui-input">
+            <option [value]="0" disabled>Select your unit...</option>
+            
+            @for (unit of myUnits(); track unit.unitID) {
+              <option [value]="unit.unitID">{{ unit.displayText }}</option>
+            }
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Category</label>
+          <select formControlName="category" class="ui-input">
+            <option value="">Select Category...</option>
+            <option value="Plumbing">Plumbing</option>
+            <option value="Electrical">Electrical</option>
+            <option value="Cleaning">Cleaning</option>
+            <option value="Security">Security</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Description</label>
+          <textarea 
+            formControlName="description" 
+            class="ui-input" 
+            rows="3" 
+            placeholder="Please describe the issue in detail...">
+          </textarea>
+        </div>
+
+        <div class="form-group">
+          <label>Priority</label>
+          <select formControlName="priority" class="ui-input">
+            <option value="">Select Priority...</option>
+            <option value="Low">Low (Can wait a few days)</option>
+            <option value="Medium">Medium (Needs attention soon)</option>
+            <option value="High">High (Urgent/Emergency)</option>
+          </select>
+        </div>
+
+        <div class="form-actions">
+          <button type="button" class="btn btn-secondary" (click)="closeForm()" [disabled]="isSubmitting()">Cancel</button>
+          <button type="submit" class="btn btn-primary" [disabled]="form.invalid || isSubmitting()">
+            @if (isSubmitting()) { Submitting... } @else { Submit Request }
+          </button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+}

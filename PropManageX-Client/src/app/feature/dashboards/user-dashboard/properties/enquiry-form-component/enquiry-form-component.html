@@ -1,0 +1,54 @@
+<div class="container fadeIn">
+  <div class="elevated-card">
+    
+    <button class="icon-close" (click)="goBack()" aria-label="Close">✕</button>
+
+    <div class="card-header">
+      <h1>Submit Enquiry</h1>
+      <p class="subtitle">Our specialized agents will contact you within 24 hours.</p>
+    </div>
+
+    <form [formGroup]="enquiryForm" (ngSubmit)="onSubmit()" class="elevated-form">
+      
+      <div class="form-item">
+        <label>Full Name</label>
+        <div class="input-wrapper">
+          <input type="text" formControlName="customerName" class="premium-input" placeholder="Your full name" />
+        </div>
+      </div>
+
+      <div class="form-item">
+        <label>Gmail Address</label>
+        <div class="input-wrapper">
+          <input type="email" formControlName="contactInfo" class="premium-input" placeholder="example@gmail.com" />
+        </div>
+      </div>
+
+      <div class="form-item">
+        <label>I am interested in</label>
+        <div class="input-wrapper select-container">
+          <select formControlName="interestType" class="premium-input premium-select">
+            <option value="" disabled selected>Select Buy or Rent</option>
+            <option value="Buy">Interested to Buy</option>
+            <option value="Rent">Interested to Rent</option>
+          </select>
+          <div class="select-arrow">▼</div>
+        </div>
+      </div>
+
+      <hr class="form-divider" />
+
+      <div class="form-item property-ref">
+        <label>Property Reference</label>
+        <input type="text" formControlName="propertyID" class="premium-input muted-input" readonly />
+      </div>
+
+      <div class="form-actions">
+        <button type="submit" class="pill-btn-black" [disabled]="isSubmitting() || enquiryForm.invalid">
+          {{ isSubmitting() ? 'Sending...' : 'Send Enquiry' }}
+        </button>
+      </div>
+
+    </form>
+  </div>
+</div>

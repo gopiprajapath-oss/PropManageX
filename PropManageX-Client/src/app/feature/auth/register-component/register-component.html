@@ -1,0 +1,105 @@
+<div class="auth-page-wrapper">
+  <div class="auth-card">
+    <div class="auth-card-header">
+      <h3 class="auth-title">Create an account</h3>
+      <p class="auth-subtitle">Enter your details below to create your account.</p>
+    </div>
+    
+    <div class="auth-card-body">
+      <form [formGroup]="form" (ngSubmit)="onSubmit()" novalidate>
+        
+        <div class="field-group">
+          <label class="field-label" for="name">Full Name</label>
+          <input 
+            id="name"
+            type="text" 
+            class="field-input" 
+            [class.field-error]="form.get('name')?.invalid && form.get('name')?.touched"
+            formControlName="name" 
+            placeholder="John Doe" />
+          @if (form.get('name')?.invalid && form.get('name')?.touched) {
+            <p class="error-message">Name is required.</p>
+          }
+        </div>
+
+        <div class="field-group">
+            <label class="field-label" for="role">Role</label>
+            <select 
+            id="role" 
+            class="field-input ui-select" 
+            formControlName="role"
+            [class.field-error]="form.get('role')?.invalid && form.get('role')?.touched">
+            <option value="">Select Role</option>
+            <option value="Tenant">Tenant</option>
+            <option value="Buyer">Buyer</option>
+            </select>
+            @if (form.get('role')?.invalid && form.get('role')?.touched) {
+            <p class="error-message">Role is required.</p>
+            }
+        </div>
+
+
+        <div class="field-group">
+          <label class="field-label" for="email">Email</label>
+          <input 
+            id="email"
+            type="email" 
+            class="field-input" 
+            [class.field-error]="form.get('email')?.invalid && form.get('email')?.touched"
+            formControlName="email" 
+            placeholder="name@example.com" />
+          @if (form.get('email')?.invalid && form.get('email')?.touched) {
+            <p class="error-message">Please enter a valid email.</p>
+          }
+        </div>
+
+        <div class="field-group">
+          <label class="field-label" for="phone">Phone Number</label>
+          <input 
+            id="phone"
+            type="text" 
+            class="field-input" 
+            [class.field-error]="form.get('phone')?.invalid && form.get('phone')?.touched"
+            formControlName="phone" 
+            placeholder="+1 234 567 890" />
+          @if (form.get('phone')?.invalid && form.get('phone')?.touched) {
+            <p class="error-message">Phone number is required.</p>
+          }
+        </div>
+
+        <div class="field-group">
+          <label class="field-label" for="password">Password</label>
+          <input 
+            id="password"
+            type="password" 
+            class="field-input" 
+            [class.field-error]="form.get('password')?.invalid && form.get('password')?.touched"
+            formControlName="password" 
+            placeholder="••••••••" />
+          @if (form.get('password')?.invalid && form.get('password')?.touched) {
+            <p class="error-message">Password must be at least 6 characters.</p>
+          }
+        </div>
+
+        @if (error()) {
+          <div class="system-alert">
+            {{ error() }}
+          </div>
+        }
+
+        <button 
+          type="submit" 
+          class="submit-button" 
+          [disabled]="loading()">
+          @if (loading()) {
+            <span class="btn-spinner"></span>
+            Processing...
+          } @else {
+            Create Account
+          }
+        </button>
+        
+      </form>
+    </div>
+  </div>
+</div>

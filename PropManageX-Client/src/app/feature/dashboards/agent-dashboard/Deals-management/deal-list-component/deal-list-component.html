@@ -1,0 +1,41 @@
+<div class="deal-container">
+ 
+  <div class="header">
+    <h2>Deals</h2>
+    <button routerLink="/agent-dashboard/add-deal">+ Add Deal</button>
+  </div>
+ 
+  <table>
+    <thead>
+      <tr>
+        <th>Deal ID</th>
+        <th>Lead</th>
+        <th>Unit</th>
+        <th>Type</th>
+        <th>Amount</th>
+        <!-- <th>Date</th> -->
+        <th>Status</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+ 
+    <tbody>
+      <tr *ngFor="let deal of deals()">
+        <td>{{ deal.dealID}}</td>
+        <td>{{ deal.leadID }}</td>
+        <td>{{ deal.unitID }}</td>
+        <td>{{ deal.dealType }}</td>
+        <td>{{ deal.agreedValue }}</td>
+        <!-- <td>{{ deal.expectedClosureDate | date}}</td> -->
+        <td>{{ deal.status }}</td>
+        <td>
+          <button [routerLink]="['/agent-dashboard/edit-deal', deal.dealID]">
+            Edit
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+ 
+</div>
+ 

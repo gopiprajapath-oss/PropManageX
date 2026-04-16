@@ -1,0 +1,96 @@
+.form-card {
+  background: #fff;
+  border: 1px solid hsl(240 5.9% 90%);
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+  animation: fadeIn 0.3s ease;
+}
+
+.form-card h3 {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: hsl(240 10% 3.9%);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: hsl(240 3.8% 46.1%);
+  margin-bottom: 0.5rem;
+}
+
+.ui-input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid hsl(240 5.9% 90%);
+  border-radius: 6px;
+  font-size: 0.875rem;
+  outline: none;
+  background: transparent;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  box-sizing: border-box;
+}
+
+.ui-input:focus {
+  border-color: hsl(240 5.9% 10%);
+  box-shadow: 0 0 0 1px hsl(240 5.9% 10%);
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 1rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid hsl(240 5.9% 90%);
+}
+
+.ui-btn-primary {
+  background-color: hsl(240 5.9% 10%);
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.ui-btn-primary:hover:not(:disabled) { opacity: 0.9; }
+.ui-btn-primary:disabled { opacity: 0.5;
+cursor: not-allowed; }
+
+.ui-btn-ghost {
+  background-color: transparent;
+  border: 1px solid hsl(240 5.9% 90%);
+  color: hsl(240 10% 3.9%);
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.ui-btn-ghost:hover { background-color: hsl(240 4.8% 95.9%);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0);
+}
+}

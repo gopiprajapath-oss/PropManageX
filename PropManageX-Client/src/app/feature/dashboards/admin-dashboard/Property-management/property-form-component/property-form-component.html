@@ -1,0 +1,59 @@
+<div class="form-container">
+  <div class="ui-card">
+
+    <h2 class="title">
+      {{ isEdit ? 'Edit Property' : 'Add Property' }}
+    </h2>
+
+    <form [formGroup]="form" (ngSubmit)="onSubmit()" class="form-grid">
+
+      <!-- Name -->
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input id="name" type="text" formControlName="name" class="ui-input" />
+      </div>
+
+      <!-- Type (Dropdown) -->
+      <div class="form-group">
+        <label for="type">Type</label>
+        <select id="type" formControlName="type" class="ui-input">
+          <option value="">Select Type</option>
+          <option value="Residential">Residential</option>
+          <option value="Commercial">Commercial</option>
+        </select>
+      </div>
+
+      <!-- Location -->
+      <div class="form-group">
+        <label for="location">Location</label>
+        <input id="location" type="text" formControlName="location" class="ui-input" />
+      </div>
+
+      <!-- Total Units -->
+      <div class="form-group">
+        <label for="totalUnits">Total Units</label>
+        <input id="totalUnits" type="number" formControlName="totalUnits" class="ui-input" />
+      </div>
+
+      <!-- Status -->
+      <div class="form-group">
+        <label for="status">Status</label>
+        <select id="status" formControlName="status" class="ui-input">
+          <option value="">Select Status</option>
+          <option value="Available">Available</option>
+          <option value="Active">Active</option>
+          <option value="Sold">Sold</option>
+        </select>
+      </div>
+
+      <!-- Actions -->
+      <div class="form-actions">
+        <button type="submit" class="ui-button">
+          {{ isEdit ? 'Update' : 'Save' }}
+        </button>
+      </div>
+
+    </form>
+
+  </div>
+</div>

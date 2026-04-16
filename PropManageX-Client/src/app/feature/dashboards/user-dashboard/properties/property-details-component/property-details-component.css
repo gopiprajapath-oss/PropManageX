@@ -1,0 +1,176 @@
+/* --- Layout Structure --- */
+.details-layout {
+  display: grid;
+  grid-template-columns: 1fr 320px; /* Sidebar layout for the button */
+  gap: 2rem;
+  align-items: start;
+}
+
+/* --- Base Card System --- */
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+/* --- Property Main Card --- */
+.property-main-card {
+  transition: transform 0.2s ease;
+}
+
+.banner {
+  position: relative;
+  width: 100%;
+  height: 380px;
+  background: var(--muted);
+}
+
+.banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.banner .badge {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  padding: 0.5rem 1rem;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(4px);
+  color: #166534; /* Success Green */
+  font-weight: 700;
+  border-radius: 99px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* --- Content Areas --- */
+.content {
+  padding: 2rem;
+}
+
+.header h1 {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: var(--foreground);
+  letter-spacing: -0.05em;
+  margin-bottom: 0.5rem;
+}
+
+/* --- Info Grid --- */
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.info-box {
+  padding: 1rem;
+  background: var(--background);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.info-box .label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--muted-foreground);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.25rem;
+}
+
+.info-box p {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* --- Sidebar Enquiry Card --- */
+.enquiry-card {
+  position: sticky;
+  top: 2rem;
+  text-align: center;
+  border: 1px solid var(--border); /* Standardized border */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05); /* Soft shadow for emphasis */
+}
+
+.enquiry-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+  color: var(--foreground);
+}
+
+.enquiry-card p {
+  margin-bottom: 1rem;
+}
+
+/* --- THE BLACK ENQUIRY BUTTON --- */
+.enquiry-trigger {
+  width: 100%;
+  margin-top: 1rem;
+  padding: 0.875rem; /* Standardized height */
+  
+  /* Black Background and White Text */
+  background-color: #000000; /* Strict Black */
+  color: #FFFFFF; /* Strict White for maximum contrast */
+  
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase; /* Standard btn style */
+  font-size: 0.875rem;
+  
+  border-radius: 100px;
+  border: 2px solid #000000; /* Prevents border jump on hover */
+  cursor: pointer;
+  
+  /* Smooth transitions */
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Color Interaction on Hover (Inversion) */
+.enquiry-trigger:hover:not(:disabled) {
+  /* Inverts: White background, Black text/border */
+  background-color: #FFFFFF;
+  color: #000000;
+  border-color: #000000;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+/* Visual Active State */
+.enquiry-trigger:active:not(:disabled) {
+  transform: translateY(1px);
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.enquiry-trigger:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.sub-text {
+  font-size: 0.75rem;
+  color: var(--muted-foreground);
+  margin-top: 1.25rem;
+  font-style: italic;
+}
+
+/* --- Mobile Responsive --- */
+@media (max-width: 900px) {
+  .details-layout {
+    grid-template-columns: 1fr;
+  }
+  
+  .enquiry-card {
+    position: static;
+    order: -1; /* Move button to top on mobile for better UX */
+  }
+
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+}

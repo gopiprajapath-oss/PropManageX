@@ -1,0 +1,143 @@
+/* --- Shadcn Variable Tokens --- */
+:host {
+  --background: #ffffff;
+  --foreground: #09090b;
+  --muted: #f4f4f5;
+  --muted-foreground: #71717a;
+  --border: #e4e4e7;
+  --input: #e4e4e7;
+  --primary: #18181b;
+  --primary-foreground: #fafafa;
+  --destructive: #ef4444;
+  --destructive-foreground: #fafafa;
+  --ring: #a1a1aa;
+  --radius: 0.5rem; /* Rounded aesthetics */
+}
+
+/* --- Card Container --- */
+.ui-card {
+  background-color: var(--background);
+  color: var(--foreground);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.ui-card-header {
+  padding: 1.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.ui-card-content {
+  padding: 1.5rem;
+}
+
+/* --- Typography --- */
+.ui-heading {
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  color: var(--foreground);
+}
+
+.ui-subtext {
+  color: var(--muted-foreground);
+  font-size: 0.875rem;
+}
+
+.text-xs {
+  font-size: 0.75rem;
+}
+
+.m-0 { margin: 0; }
+.mt-1 { margin-top: 0.25rem; }
+
+/* --- Table Styling --- */
+.ui-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+  text-align: left;
+}
+
+.ui-table thead tr {
+  border-bottom: 1px solid var(--border);
+}
+
+.ui-table th {
+  padding: 0.75rem 1rem;
+  font-weight: 500;
+  color: var(--muted-foreground);
+  vertical-align: middle;
+}
+
+.ui-table td {
+  padding: 1rem;
+  vertical-align: middle;
+  border-bottom: 1px solid var(--border);
+}
+
+.ui-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* --- Buttons (Rounded) --- */
+button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  transition: background-color 0.2s, opacity 0.2s;
+  cursor: pointer;
+  border-radius: var(--radius); /* Controlled by token */
+  border: 1px solid transparent;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+}
+
+.ui-btn-primary {
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+}
+
+.ui-btn-primary:hover {
+  background-color: rgba(24, 24, 27, 0.9);
+}
+
+.ui-btn-outline {
+  background-color: transparent;
+  border-color: var(--input);
+  color: var(--foreground);
+}
+
+.ui-btn-outline:hover {
+  background-color: var(--muted);
+}
+
+.ui-btn-danger {
+  background-color: var(--destructive);
+  color: var(--destructive-foreground);
+}
+
+.ui-btn-danger:hover {
+  opacity: 0.9;
+}
+
+.ui-btn-sm {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+}
+
+/* --- Utilities --- */
+.row-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.loading-state {
+  padding: 3rem 0;
+  text-align: center;
+  color: var(--muted-foreground);
+  font-style: italic;
+}

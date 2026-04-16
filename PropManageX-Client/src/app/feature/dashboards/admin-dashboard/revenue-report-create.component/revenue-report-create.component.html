@@ -1,0 +1,33 @@
+<div class="form-card">
+  <h3>Generate New Institutional Report</h3>
+  <form (ngSubmit)="submitForm()">
+    <div class="form-group">
+      <label>Scope (e.g., "Annual - 2026")</label>
+      <input type="text" [(ngModel)]="scope" name="scope" required class="ui-input" />
+    </div>
+    
+    <div class="form-row">
+      <div class="form-group">
+        <label>Rental Yield (%)</label>
+        <input type="number" [(ngModel)]="yieldRate" name="yieldRate" class="ui-input" />
+      </div>
+      <div class="form-group">
+     
+         <label>Collection Rate (%)</label>
+        <input type="number" [(ngModel)]="collectionRate" name="collectionRate" class="ui-input" />
+      </div>
+      <div class="form-group">
+        <label>Occupancy Rate (%)</label>
+        <input type="number" [(ngModel)]="occupancyRate" name="occupancyRate" class="ui-input" />
+      </div>
+    </div>
+
+    <div class="form-actions">
+      <button type="button" (click)="canceled.emit()" class="ui-btn-ghost">Cancel</button>
+      <button type="submit" [disabled]="isSaving() ||
+!scope" class="ui-btn-primary">
+        {{ isSaving() ? 'Saving...' : 'Save Report' }}
+      </button>
+    </div>
+  </form>
+</div>

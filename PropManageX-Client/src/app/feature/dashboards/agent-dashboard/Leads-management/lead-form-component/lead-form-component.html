@@ -1,0 +1,34 @@
+<div class="form-container">
+  <h2>Add / Edit Lead</h2>
+ 
+  <form [formGroup]="form" (ngSubmit)="submit()">
+ 
+    <label>property ID</label>
+    <input type="number" formControlName="propertyID" placeholder="Property ID" />
+ 
+    <label>customer Name</label>
+    <input type="text" formControlName="customerName" placeholder="Customer Name" />
+ 
+    <label>Email</label>
+    <input type="text" formControlName="contactInfo" placeholder="Email" />
+ 
+    <label>Interest Type</label>
+    <select formControlName="interestType">
+      <option value="">Select Interest</option>
+      <option value="Buy">Buy</option>
+      <option value="Rent">Rent</option>
+    </select>
+     
+    <label>Status</label>
+    <select formControlName="status">
+      <option value="">Select Status</option>
+      <option value="New">New</option>
+      <option value="Negotiation">Negotiation</option>
+      <option value="Closed">Closed</option>
+    </select>
+ 
+    <button type="submit">Save Lead</button>
+ 
+  </form>
+</div>
+ 

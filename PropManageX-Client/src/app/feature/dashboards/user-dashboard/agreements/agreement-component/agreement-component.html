@@ -1,0 +1,69 @@
+<div class="page-container">
+  
+  <div class="page-header">
+    <h2>My Agreements</h2>
+    <p class="text-muted">Review and manage your lease and sale contracts.</p>
+  </div>
+
+  @if (isLoading()) {
+    <div class="loading-state">Loading your agreements...</div>
+  } @else {
+    <div class="agreements-grid">
+      
+      @for (contract of agreements(); track contract.contractID) {
+        <div class="ui-card agreement-card">
+          
+          <div class="card-header">
+            <h3>{{ contract.contractType }} Agreement</h3>
+            
+            <span class="badge" 
+                  [class.signed-badge]="contract.status === 'Signed'" 
+                  [class.pending-badge]="contract.status !== 'Signed'">
+              {{ contract.status === 'Signed' ? 'Signed' : 'Pending Signature' }}
+            </span>
+          </div>
+
+          <div class="card-body">
+            <div class="info-row">
+              <span class="label">Contract Value:</span>
+              <span class="value">{{ contract.contractValue | currency:'INR':'symbol':'1.0-0' }}</span>
+            </div>
+            <div class="info-row">
+              <span class="label">Start Date:</span>
+              <span class="value">{{ contract.startDate | date:'mediumDate' }}</span>
+            </div>
+            <div class="info-row">
+              <span class="label">End Date:</span>
+              <span class="value">{{ contract.endDate | date:'mediumDate' }}</span>
+            </div>
+          </div>
+
+          <div class="card-footer">
+            <button 
+              (click)="signContract(contract.contractID)"
+              [disabled]="contract.status === 'Signed' || isSigningId() === contract.contractID"
+              class="btn sign-btn"
+              [class.btn-success]="contract.status === 'Signed'">
+              
+              @if (isSigningId() === contract.contractID) {
+                Signing...
+              } @else if (contract.status === 'Signed') {
+                ✔ Agreement Signed
+              } @else {
+                Sign Agreement
+              }
+
+            </button>
+          </div>
+          
+        </div>
+      } @empty {
+        <div class="empty-state">
+          <p>You do not have any active agreements at this time.</p>
+        </div>
+      }
+
+    </div>
+  }
+
+</div>

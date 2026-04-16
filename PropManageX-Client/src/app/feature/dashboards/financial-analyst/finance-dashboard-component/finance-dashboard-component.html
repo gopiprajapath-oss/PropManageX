@@ -1,0 +1,13 @@
+<div class="dashboard-container d-flex flex-column" style="height: 100vh;">
+  <app-header></app-header>
+
+  <div class="dashboard-body d-flex flex-grow-1 overflow-hidden">
+    
+    <app-sidebar></app-sidebar>
+
+    <main class="dashboard-content flex-grow-1 overflow-auto p-4 bg-gray-50">
+      <router-outlet></router-outlet>
+    </main>
+
+  </div>
+</div>

@@ -1,0 +1,131 @@
+/* --- Shadcn Variables --- */
+:host {
+  display: block;
+  --border: #e4e4e7;
+  --foreground: #09090b;
+  --muted-foreground: #71717a;
+  --radius: 0.5rem;
+}
+
+/* Card Styling */
+.ui-card {
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* --- Updated Header Styling --- */
+
+.ui-card-header {
+  /* Matches the table cell padding exactly */
+  padding: 1.5rem 1rem; 
+  border-bottom: 1px solid var(--border);
+  background-color: #ffffff;
+}
+
+.ui-heading {
+  /* Ensure no default browser margins push it out */
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #09090b;
+  /* Aligning optical weight with the text below */
+  padding-left: 0.25rem; 
+}
+
+/* --- Ensure Table Alignment --- */
+.ui-table th:first-child, 
+.ui-table td:first-child {
+  /* This ensures the '#' and 'Contract ID' align with the header text */
+  padding-left: 1.25rem; 
+}
+
+/* Table Architecture */
+.ui-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+
+.ui-table th {
+  padding: 1rem;
+  text-align: left;
+  font-weight: 500;
+  color: var(--muted-foreground);
+  border-bottom: 1px solid var(--border);
+  background-color: #fafafa;
+}
+
+.ui-table td {
+  padding: 1.25rem 1rem; /* Extra padding for a "premium" feel */
+  border-bottom: 1px solid var(--border);
+  vertical-align: middle;
+  color: #27272a;
+}
+
+.ui-table tbody tr:hover {
+  background-color: #fbfbfb;
+}
+
+/* Monochrome Pill Button */
+.ui-btn-outline {
+  background: #ffffff;
+  color: var(--foreground);
+  border: 1px solid var(--border);
+  border-radius: 9999px; /* Pill shape */
+  padding: 0.4rem 1rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.ui-btn-outline:hover {
+  background-color: #f4f4f5;
+  border-color: #d4d4d8;
+}
+
+/* Status Badges (The color pop) */
+.ui-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.2rem 0.6rem;
+  border-radius: 9999px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.ui-badge-active {
+  background-color: #f0fdf4;
+  color: #16a34a;
+  border: 1px solid #bbf7d0;
+}
+
+.ui-badge-expired {
+  background-color: #fef2f2;
+  color: #ef4444;
+  border: 1px solid #fecaca;
+}
+
+/* Alert Styling */
+.ui-alert {
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius);
+  margin-bottom: 1rem;
+  font-size: 0.875rem;
+}
+
+.ui-alert-error {
+  background-color: #fef2f2;
+  color: #991b1b;
+  border: 1px solid #fecaca;
+}
+
+.loading-state {
+  text-align: center;
+  padding: 3rem;
+  color: var(--muted-foreground);
+}

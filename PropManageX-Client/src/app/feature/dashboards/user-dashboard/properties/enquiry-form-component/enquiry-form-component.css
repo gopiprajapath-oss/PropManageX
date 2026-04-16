@@ -1,0 +1,206 @@
+/* --- Background Container (Centered View) --- */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+  background-color: #f8fafc; /* Very subtle neutral-cool grey */
+  min-height: 100vh;
+  font-family: 'Inter', system-ui, sans-serif; /* Recommended clean font */
+}
+
+/* --- The Card (Inspired by image_2.png) --- */
+.elevated-card {
+  background: #ffffff;
+  width: 100%;
+  max-width: 500px; /* Kept tight for focus */
+  padding: 48px; /* High internal padding for luxury feel */
+  border-radius: 28px; /* Maximum corner radius */
+  border: 1px solid #f1f5f9; /* Extra soft border */
+  box-shadow: 0 15px 50px -10px rgba(0, 0, 0, 0.04); /* Deep, soft shadow */
+  position: relative;
+  margin: auto;
+}
+
+/* --- Header & Subtitle --- */
+.card-header {
+  margin-bottom: 40px; /* Big gap to separate header */
+  text-align: center;
+}
+
+.card-header h1 {
+  font-size: 26px;
+  font-weight: 800; /* Bold and assertive */
+  color: #0f172a; /* Slate 900 */
+  margin: 0 0 10px 0;
+  letter-spacing: -0.04em; /* Tight letter spacing for modern look */
+}
+
+.subtitle {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #64748b; /* Slate 500 */
+  margin: 0;
+  max-width: 80%; /* Center the subtitle text */
+  margin: auto;
+}
+
+/* --- Form Item Layout --- */
+.elevated-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px; /* Big gap between form items */
+}
+
+.form-item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Soft gap between label and input */
+}
+
+/* --- Label Typography --- */
+.form-item label {
+  font-size: 13px;
+  font-weight: 600; /* Medium-bold */
+  text-transform: uppercase; /* Clean uppercase */
+  letter-spacing: 0.06em; /* Spaced out caps */
+  color: #475569; /* Slate 600 */
+  padding-left: 4px; /* Align with input content */
+}
+
+/* --- The Input (Crucial for the good UI) --- */
+.input-wrapper {
+  position: relative;
+}
+
+.premium-input {
+  width: 100%;
+  padding: 16px 20px; /* Deep padding for comfortable input */
+  
+  /* Styling from image_2.png */
+  background-color: #f8fafc; /* Subtle fill */
+  border: 1px solid #e2e8f0; /* Soft border matching input background */
+  
+  border-radius: 16px; /* High radius */
+  font-size: 16px;
+  color: #0f172a; /* Slate 900 */
+  transition: all 0.2s ease-in-out;
+}
+
+/* Active State - Black interaction */
+.premium-input:focus {
+  outline: none;
+  background-color: #ffffff;
+  border-color: #000000;
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.04); /* Soft focus ring */
+}
+
+/* Input Placeholder */
+.premium-input::placeholder {
+  color: #94a3b8; /* Slate 400 */
+  font-weight: 400;
+}
+
+/* Readonly Muted State */
+.muted-input {
+  color: #94a3b8;
+  background-color: #f1f5f9;
+  cursor: not-allowed;
+  border-color: #f1f5f9;
+}
+
+/* Custom Refinement on Property Ref field */
+.property-ref {
+  margin-top: -8px; /* Position closer to the separator */
+}
+
+/* --- The Dropdown (Select) --- */
+.select-container {
+  display: flex;
+  align-items: center;
+}
+
+.premium-select {
+  appearance: none; /* Hide default browser arrow */
+  cursor: pointer;
+  padding-right: 50px; /* Room for custom arrow */
+}
+
+/* Custom Select Arrow Styling */
+.select-arrow {
+  position: absolute;
+  right: 20px;
+  font-size: 10px;
+  color: #94a3b8; /* Muted grey */
+  pointer-events: none; /* Don't block clicks */
+  transition: transform 0.2s;
+}
+
+.premium-select:focus + .select-arrow {
+  color: #000000;
+  transform: rotate(180deg); /* Flip on focus */
+}
+
+/* --- Divider line (Separates contextual info) --- */
+.form-divider {
+  border: 0;
+  border-top: 1px solid #e2e8f0;
+  margin: 10px 0;
+}
+
+/* --- The Pill Submit Button (Bold CTA) --- */
+.pill-btn-black {
+  width: 100%;
+  padding: 18px; /* Comfortable height */
+  background: #000000; /* Strict Black */
+  color: #ffffff;
+  border: none;
+  border-radius: 50px; /* Full Pill Shape */
+  
+  font-size: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em; /* Premium spaced out caps */
+  
+  cursor: pointer;
+  margin-top: 24px;
+  transition: transform 0.1s ease, opacity 0.2s ease;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1); /* Floating effect */
+}
+
+.pill-btn-black:hover:not(:disabled) {
+  opacity: 0.9;
+}
+
+.pill-btn-black:active:not(:disabled) {
+  transform: translateY(1px) scale(0.99);
+}
+
+.pill-btn-black:disabled {
+  background-color: #cbd5e1; /* Greyed out */
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+/* --- Close Icon --- */
+.icon-close {
+  position: absolute;
+  top: 28px;
+  right: 28px;
+  background: none;
+  border: none;
+  font-size: 18px;
+  color: #94a3b8;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.icon-close:hover {
+  background: #f1f5f9;
+  color: #000000;
+}

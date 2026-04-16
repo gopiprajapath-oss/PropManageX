@@ -1,0 +1,28 @@
+.form-container {
+  width: 400px;
+  margin: 40px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+}
+ 
+form {
+  display: flex;
+  flex-direction: column;
+}
+ 
+input, select {
+  margin-bottom: 12px;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+ 
+button {
+  background: #2563eb;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+}
+ 

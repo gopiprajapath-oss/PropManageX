@@ -1,0 +1,69 @@
+/* Host binding sets the container layout */
+.ui-sidebar-host {
+  display: block;
+  height: 100vh;
+  width: 250px;
+  flex-shrink: 0;
+  border-right: 1px solid #e4e4e7;
+  background-color: #ffffff;
+}
+
+.ui-sidebar {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 1.5rem 1rem;
+}
+
+.sidebar-header {
+  margin-bottom: 2rem;
+  padding-left: 0.75rem;
+}
+
+.ui-heading {
+  color: #09090b;
+  margin: 0;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+}
+
+.ui-subtext {
+  color: #71717a;
+  margin: 0.25rem 0 0 0;
+  text-transform: capitalize;
+}
+
+.text-lg { font-size: 1.125rem; }
+.text-xs { font-size: 0.75rem; }
+
+.menu-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.menu-link {
+  display: block;
+  padding: 0.5rem 0.75rem;
+  color: #71717a;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 0.875rem;
+  transition: all 0.2s ease;
+}
+
+.menu-link:hover {
+  color: #09090b;
+  background-color: #f4f4f5;
+}
+
+/* Shadcn-inspired Active State */
+.menu-link.active {
+  color: #09090b;
+  background-color: #f4f4f5;
+  font-weight: 600;
+}

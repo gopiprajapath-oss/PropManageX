@@ -1,0 +1,46 @@
+<div class="ui-card">
+  
+  <div class="ui-card-header">
+    <h3 class="ui-heading">Renew Contract #{{ targetContractId() }}</h3>
+    <p class="ui-subtext">Specify the new expiration date and proposed value to extend this contract.</p>
+  </div>
+
+  <div class="ui-card-content">
+    <form [formGroup]="form" (ngSubmit)="processRenewal()">
+      
+      <div class="form-group">
+        <label for="newEndDate">New End Date</label>
+        <input 
+          id="newEndDate" 
+          type="date" 
+          formControlName="newEndDate">
+        @if (form.get('newEndDate')?.invalid && form.get('newEndDate')?.touched) {
+          <span class="ui-error-text">A valid end date is required.</span>
+        }
+      </div>
+
+      <div class="form-group">
+        <label for="proposedValue">Proposed Value (₹)</label>
+        <input 
+          id="proposedValue" 
+          type="number" 
+          formControlName="proposedValue"
+          placeholder="0.00">
+        @if (form.get('proposedValue')?.invalid && form.get('proposedValue')?.touched) {
+          <span class="ui-error-text">A valid proposed value is required.</span>
+        }
+      </div>
+
+      <div class="action-area">
+        <button type="submit" class="ui-btn-pill-black" [disabled]="isLoading() || form.invalid">
+          Save Changes
+        </button>
+        <button type="button" class="ui-btn-link" (click)="cancel()">
+          Cancel
+        </button>
+      </div>
+
+    </form>
+  </div>
+
+</div>

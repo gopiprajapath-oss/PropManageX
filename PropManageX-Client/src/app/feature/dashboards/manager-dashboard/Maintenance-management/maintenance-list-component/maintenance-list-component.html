@@ -1,0 +1,77 @@
+<section class="ui-card">
+  <div class="ui-card-header d-flex justify-content-between align-items-center">
+    <h3 class="ui-heading m-0">Maintenance Queue</h3>
+    <div class="ui-card-actions">
+      </div>
+  </div>
+
+  <div class="ui-card-content">
+    @if (error()) {
+      <div class="ui-alert ui-alert-error d-flex align-items-center mb-4">
+        <span class="me-2">⚠️</span> {{ error() }}
+      </div>
+    }
+
+    @if (isLoading()) {
+      <div class="loading-state d-flex flex-column align-items-center py-5">
+        <div class="spinner-border spinner-border-sm text-dark mb-2" role="status"></div>
+        <p class="ui-subtext">Loading operational data...</p>
+      </div>
+    } @else {
+      <div class="table-responsive">
+        <table class="ui-table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Unit</th>
+              <th>Category</th>
+              <th>Priority</th>
+              <th>Status</th>
+              <th class="text-end">Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            @for (req of maintenanceRequests(); track req.requestID) {
+              <tr class="ui-table-row">
+                <td class="font-mono">#{{ req.requestID }}</td>
+                <td>{{ req.unitID }}</td>
+                <td>{{ req.category }}</td>
+                <td>
+                  <span class="ui-badge" 
+                        [class.ui-badge-high]="req.priority === 'High'">
+                    {{ req.priority }}
+                  </span>
+                </td>
+                <td>
+                  <span class="status-indicator" 
+                        [class.status-in-progress]="req.status === 'InProgress'">
+                    {{ req.status === 'InProgress' ? 'In Progress' : req.status }}
+                  </span>
+                </td>
+                <td class="text-end">
+                  <div class="d-flex gap-2 justify-content-end">
+                    <button class="ui-btn-outline ui-btn-sm ui-focus-ring" 
+                            [routerLink]="['/manager-dashboard/maintenance/edit', req.requestID]">
+                      Update
+                    </button>
+                    
+                    @if (req.status === 'Open') {
+                      <button class="ui-btn-outline ui-btn-sm ui-focus-ring" 
+                              (click)="startAssignment(req)">
+                        Assign Vendor
+                      </button>
+                      <button class="ui-btn-danger ui-btn-sm ui-focus-ring" 
+                              (click)="deleteMaintenance(req)">
+                        Delete
+                      </button>
+                    }
+                  </div>
+                </td>
+              </tr>
+            }
+          </tbody>
+        </table>
+      </div>
+    }
+  </div>
+</section>

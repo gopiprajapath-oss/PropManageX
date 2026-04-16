@@ -1,0 +1,84 @@
+.container {
+  padding: 20px;
+}
+ 
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+ 
+h2 {
+  font-size: 24px;
+  font-weight: 600;
+}
+ 
+.add-btn {
+  background: #64a4cb;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+ 
+.add-btn:hover {
+  background: #0056b3;
+}
+ 
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+}
+ 
+.table thead {
+  background: #f5f7fa;
+}
+ 
+.table th, .table td {
+  padding: 12px 15px;
+  text-align: left;
+}
+ 
+.table th {
+  font-weight: 600;
+}
+ 
+.table tbody tr {
+  border-bottom: 1px solid #eee;
+}
+ 
+.table tbody tr:hover {
+  background: #f9f9f9;
+}
+ 
+.edit-btn {
+  background: #64a4cb;
+  border: none;
+  padding: 6px 10px;
+  margin-right: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+ 
+.delete-btn {
+  background: #64a4cb;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+ 
+.edit-btn:hover {
+  background: #64a4cb;
+}
+ 
+.delete-btn:hover {
+  background: #64a4cb;
+}
+ 

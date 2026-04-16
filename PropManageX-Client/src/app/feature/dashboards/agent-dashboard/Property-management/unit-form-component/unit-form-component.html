@@ -1,0 +1,48 @@
+<div class="form-container">
+  <h2>Edit Unit</h2>
+ 
+  <form [formGroup]="form" (ngSubmit)="submit()">
+ 
+    <!-- Unit Number -->
+    <div class="form-group">
+      <label>Unit Number</label>
+      <input type="number" formControlName="unitNumber" />
+    </div>
+ 
+    <!-- Area -->
+    <div class="form-group">
+      <label>Area (SqFt)</label>
+      <input type="number" formControlName="areaSqFt" />
+    </div>
+ 
+    <!-- Bedrooms -->
+    <div class="form-group">
+      <label>Bedrooms</label>
+      <input type="number" formControlName="bedroomCount" />
+    </div>
+ 
+    <!-- Price -->
+    <div class="form-group">
+      <label>Price</label>
+      <input type="number" formControlName="basePrice" />
+    </div>
+ 
+    <!-- Status -->
+    <div class="form-group">
+      <label>Status</label>
+      <select formControlName="status">
+        <option value="">Select Status</option>
+        <option value="Available">Available</option>
+        <option value="Sold">Sold</option>
+        <option value="Active">Active</option>
+      </select>
+    </div>
+ 
+    <!-- Submit -->
+    <button type="submit" [disabled]="loading()">
+      {{ loading() ? 'Updating...' : 'Update Unit' }}
+    </button>
+ 
+  </form>
+</div>
+ 

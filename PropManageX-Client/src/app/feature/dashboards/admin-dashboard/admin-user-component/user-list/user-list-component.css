@@ -1,0 +1,38 @@
+.page-wrapper { display: block; width: 100%; animation: fadeIn 0.3s ease-in-out; }
+.ui-container { max-width: 1200px; margin: 0 auto; }
+.page-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; }
+.page-title { font-size: 1.5rem; font-weight: 700; color: #09090b; letter-spacing: -0.025em; margin: 0 0 0.25rem 0; }
+.page-subtext { font-size: 0.875rem; color: #71717a; margin: 0; }
+.ui-card { background: #ffffff; border: 1px solid #e4e4e7; border-radius: 12px; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05); overflow: hidden; }
+.table-responsive { width: 100%; overflow-x: auto; }
+.ui-table { width: 100%; border-collapse: collapse; text-align: left; font-size: 0.875rem; }
+.ui-table th { padding: 1rem 1.5rem; font-weight: 500; color: #71717a; border-bottom: 1px solid #e4e4e7; background: #fafafa; }
+.ui-table td { padding: 1rem 1.5rem; border-bottom: 1px solid #e4e4e7; color: #09090b; }
+.ui-table tbody tr:last-child td { border-bottom: none; }
+.ui-table tbody tr:hover { background: #f4f4f5; }
+.font-medium { font-weight: 500; }
+.muted-cell { color: #71717a; }
+.text-right { text-align: right; }
+.actions-cell { text-align: right; }
+.role-badge { display: inline-flex; align-items: center; justify-content: center; padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.75rem; font-weight: 600; background: #f4f4f5; color: #09090b; border: 1px solid #e4e4e7; text-transform: capitalize; }
+.role-badge.admin { background: #09090b; color: #ffffff; border-color: #09090b; }
+.role-badge.manager { background: #ffffff; border-color: #09090b; }
+.ui-btn-primary { background: #09090b; color: #ffffff; border: none; padding: 0.5rem 1rem; border-radius: 8px; font-size: 0.875rem; font-weight: 500; cursor: pointer; transition: opacity 0.2s; }
+.ui-btn-primary:hover { opacity: 0.9; }
+.ui-btn-primary:focus-visible { outline: none; box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #09090b; }
+.ui-btn-ghost { background: transparent; border: 1px solid #e4e4e7; padding: 0.5rem 1rem; border-radius: 8px; font-size: 0.875rem; font-weight: 500; color: #09090b; cursor: pointer; transition: all 0.2s; }
+.ui-btn-ghost:hover { background: #f4f4f5; border-color: #09090b; }
+.ui-btn-ghost-sm { background: transparent; border: 1px solid transparent; padding: 0.25rem 0.5rem; border-radius: 6px; font-size: 0.875rem; font-weight: 500; color: #09090b; cursor: pointer; transition: all 0.2s; }
+.ui-btn-ghost-sm:hover { background: #f4f4f5; border-color: #e4e4e7; }
+.mt-4 { margin-top: 1rem; }
+.loading-state, .error-state, .empty-state { padding: 4rem 2rem; text-align: center; color: #71717a; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+.error-text { color: #ef4444; font-weight: 500; margin: 0.5rem 0; }
+.error-icon { font-size: 2rem; margin-bottom: 0.5rem; }
+.spinner { border: 2px solid #e4e4e7; border-top-color: #09090b; border-radius: 50%; width: 24px; height: 24px; animation: spin 1s linear infinite; margin-bottom: 1rem; }
+@keyframes spin { to { transform: rotate(360deg); } }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
+.ui-btn-danger-ghost { background: transparent; border: 1px solid transparent; padding: 0.25rem 0.75rem; border-radius: 6px; font-size: 0.875rem; font-weight: 500; color: #ef4444; cursor: pointer; transition: all 0.2s; }
+.ui-btn-danger-ghost:hover { background: #fef2f2; border-color: #fca5a5; color: #b91c1c; }
+.ui-btn-danger-ghost:focus-visible { outline: none; box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #ef4444; }
+.ui-btn-danger-ghost:disabled { color: #a1a1aa; cursor: not-allowed; background: transparent; border-color: transparent; }
+.ui-btn-danger-ghost:disabled:hover { background: transparent; color: #a1a1aa; box-shadow: none; }

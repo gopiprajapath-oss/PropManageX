@@ -1,0 +1,72 @@
+<div class="container fadeIn">
+  @if (isLoading()) {
+    <div class="loading-state">Loading property details...</div>
+  } @else if (property()) {
+    <div class="details-layout">
+      
+      <div class="card property-main-card">
+        <div class="banner">
+          
+          <img 
+            [src]="property().image || 'https://picsum.photos/seed/' + property().propertyID + '/800/400'" 
+            [alt]="property().name" 
+          />
+          
+          <span class="badge" [attr.data-status]="property().status?.toLowerCase()">
+            {{ property().status }}
+          </span>
+        </div>
+
+        <div class="content">
+          <header class="header">
+            <div>
+              <h1>{{ property().name }}</h1>
+              <p class="muted-foreground">Premium Real Estate Listing</p>
+            </div>
+          </header>
+
+          <div class="info-grid">
+            <div class="info-box">
+              <p class="label">📍 Location</p>
+              <p>{{ property().location }}</p>
+            </div>
+            <div class="info-box">
+              <p class="label">🏢 Units</p>
+              <p>{{ property().totalUnits }} Units</p>
+            </div>
+            <div class="info-box">
+              <p class="label">🏷️ Type</p>
+              <p>{{ property().type }}</p>
+            </div>
+          </div>
+
+          <div class="description">
+            <h3>About Property</h3>
+            <p>
+              This is a premium property located in <b>{{ property().location }}</b>.
+              It offers modern amenities, great connectivity, and a high-standard lifestyle 
+              tailored for PropManageX clients.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card enquiry-card">
+        <div class="content">
+          <h3>Interested in this property?</h3>
+          <p class="muted-foreground">
+            Our specialized agents are ready to provide you with all the details, 
+            floor plans, and pricing options.
+          </p>
+          <button class="btn-success enquiry-trigger" [routerLink]="['/user-dashboard', 'property', property().propertyID, 'enquiry']">
+            Submit Enquiry
+          </button>
+          <p class="sub-text">Average response time: &lt; 24 hours</p>
+        </div>
+      </div>
+
+    </div>
+  } @else {
+    <div class="empty-state">Property not found.</div>
+  }
+</div>

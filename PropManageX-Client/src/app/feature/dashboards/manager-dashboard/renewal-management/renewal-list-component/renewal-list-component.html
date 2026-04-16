@@ -1,0 +1,51 @@
+<section class="ui-card" style="margin-top: 2rem;">
+  <div class="ui-card-header p-4 border-bottom">
+    <h3 class="ui-heading m-0">Renewal History</h3>
+  </div>
+
+  <div class="ui-card-content p-4">
+    @if (error()) {
+      <div class="ui-alert ui-alert-error">{{ error() }}</div>
+    }
+
+    @if (isLoading()) {
+      <div class="loading-state">Loading renewal data...</div>
+    } @else if (renewals().length === 0) {
+      <div class="loading-state">No renewals have been processed yet.</div>
+    } @else {
+      <div class="table-responsive">
+        <table class="ui-table">
+          <thead>
+            <tr>
+              <th>Renewal ID</th>
+              <th>Contract ID</th>
+              <th>Proposed End Date</th>
+              <th>Proposed Value</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            @for (r of renewals(); track r.renewalID) {
+              <tr>
+                <td>#{{ r.renewalID }}</td>
+                <td>#{{ r.contractID }}</td>
+                <td>{{ r.proposedEndDate | date:'mediumDate' }}</td>
+                <td>{{ r.proposedValue | currency:'INR':'symbol':'1.0-0' }}</td>
+                <td>
+                  <span class="ui-badge" 
+                        [ngClass]="{
+                          'badge-accepted': r.status === 'Accepted',
+                          'badge-declined': r.status === 'Declined',
+                          'badge-offered': r.status === 'Offered'
+                        }">
+                    {{ r.status }}
+                  </span>
+                </td>
+              </tr>
+            }
+          </tbody>
+        </table>
+      </div>
+    }
+  </div>
+</section>

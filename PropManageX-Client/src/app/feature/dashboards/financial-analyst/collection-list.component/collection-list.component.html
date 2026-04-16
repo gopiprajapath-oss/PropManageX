@@ -1,0 +1,51 @@
+<div class="collection-container">
+  <div class="header">
+    <div class="header-text">
+      <h2>Rent Collections</h2>
+      <p>Tracking outstanding payments and cash receipts.</p>
+    </div>
+    <div class="stats-mini">
+      <div class="stat-item">
+        <span class="lbl">Pending</span>
+        <span class="val">{{ collections().length }}</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="table-wrapper">
+    <table class="collection-table">
+      <thead>
+        <tr>
+          <th>Contract</th>
+          <th>Due Date</th>
+          <th>Expected Amount</th>
+          <th>Status</th>
+          <th class="text-right">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (item of collections(); track item.invoiceID) {
+           <tr [class.is-overdue]="item.status === 'Overdue'">
+            <td class="font-medium">CTR-{{ item.contractID }}</td>
+            <td>{{ item.dueDate | date:'mediumDate' }}</td>
+            <td class="font-bold">{{ item.amount | currency }}</td>
+            <td>
+              <span class="badge" [attr.data-status]="item.status.toLowerCase()">
+                {{ item.status }}
+              </span>
+            </td>
+            <td class="text-right">
+              <button (click)="markAsPaid(item.invoiceID)" class="btn-collect">
+                Record Payment
+              </button>
+            </td>
+          </tr>
+        } @empty {
+          <tr>
+            <td colspan="5" class="empty-msg">All collections are up to date.</td>
+          </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+</div>

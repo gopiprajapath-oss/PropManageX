@@ -1,0 +1,46 @@
+<section class="ui-card" style="margin-top: 2rem;">
+  <div class="ui-card-header" style="display: flex; justify-content: space-between; align-items: center;">
+    <div>
+      <h3 class="ui-heading m-0">Amenities</h3>
+      <p class="ui-subtext text-xs mt-1">Manage features and facilities for this property.</p>
+    </div>
+    <button class="ui-btn-primary" [routerLink]="['/admin-dashboard/properties', propertyId, 'add-amenity']">
+      Add Amenity
+    </button>
+  </div>
+
+  <div class="ui-card-content">
+    @if (amenities().length === 0) {
+      <div class="loading-state">No amenities have been added to this property yet.</div>
+    } @else {
+      <table class="ui-table">
+        <thead>
+          <tr>
+            <th style="width: 80px;">ID</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th style="width: 150px;">Actions</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          @for (a of amenities(); track a.amenityID) {
+            <tr>
+              <td>#{{ a.amenityID }}</td>
+              <td style="font-weight: 500; color: #09090b;">{{ a.name }}</td>
+              <td class="ui-subtext">{{ a.description || 'No description provided' }}</td>
+              <td class="row-actions">
+                <button class="ui-btn-outline ui-btn-sm" [routerLink]="['/admin-dashboard/properties', propertyId, 'edit-amenity', a.amenityID]">
+                  Edit
+                </button>
+                <button class="ui-btn-danger ui-btn-sm" (click)="deleteAmenity(a.amenityID)">
+                  Delete
+                </button>
+              </td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    }
+  </div>
+</section>

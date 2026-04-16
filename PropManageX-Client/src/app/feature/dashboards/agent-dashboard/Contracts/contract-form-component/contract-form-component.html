@@ -1,0 +1,37 @@
+<div class="form-container">
+ 
+  <h2>{{ isEdit ? 'Edit Contract' : 'Add Contract' }}</h2>
+ 
+  <form [formGroup]="form" (ngSubmit)="submit()">
+ 
+    <label>Deal ID</label>
+    <input type="number" formControlName="dealID">
+ 
+    <label>Contract Type</label>
+    <select formControlName="contractType">
+      <option value="Sale">Sale</option>
+      <option value="Lease">Lease</option>
+    </select>
+ 
+    <label>Start Date</label>
+    <input type="date" formControlName="startDate">
+ 
+    <label>End Date</label>
+    <input type="date" formControlName="endDate">
+ 
+    <label>Contract Value</label>
+    <input type="number" formControlName="contractValue">
+ 
+    <label>Status</label>
+    <select formControlName="status">
+      <option value="Active">Active</option>
+      <option value="Expired">Expired</option>
+      <option value="Terminated">Terminated</option>
+    </select>
+ 
+    <button type="submit">Save</button>
+ 
+  </form>
+ 
+</div>
+ 

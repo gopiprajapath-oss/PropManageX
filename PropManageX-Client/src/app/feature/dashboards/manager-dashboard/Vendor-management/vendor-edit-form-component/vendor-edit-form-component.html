@@ -1,0 +1,35 @@
+<div class="ui-card">
+  <h3 class="ui-heading">Update Vendor Assignment</h3>
+  <p class="ui-subtext">Editing Assignment #{{ assignmentId() }}</p>
+
+  <form [formGroup]="form" (ngSubmit)="saveAssignmentEdit()">
+    
+    <div class="form-group">
+      <label>Vendor Name</label>
+      <input type="text" formControlName="vendorName" placeholder="Enter vendor name">
+    </div>
+
+    <div class="form-group">
+      <label>Completion Date</label>
+      <input type="date" formControlName="completionDate">
+    </div>
+
+    <div class="form-group">
+      <label>Cost (Estimated/Actual)</label>
+      <div class="input-wrapper">
+        <span class="currency-symbol">₹</span>
+        <input type="number" class="input-with-symbol" formControlName="cost" placeholder="0.00">
+      </div>
+    </div>
+
+    <div class="action-area">
+      <button type="submit" class="ui-btn-pill-black">
+        Save Changes
+      </button>
+      <button type="button" class="ui-btn-link" (click)="cancel()">
+        Cancel
+      </button>
+    </div>
+
+  </form>
+</div>

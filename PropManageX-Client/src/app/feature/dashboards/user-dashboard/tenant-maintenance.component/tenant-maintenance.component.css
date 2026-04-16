@@ -1,0 +1,225 @@
+.page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 24px;
+}
+
+.header-titles h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 4px 0;
+}
+
+.text-muted {
+  color: #64748b;
+  font-size: 14px;
+  margin: 0;
+}
+
+.ui-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+/* --- Table Styling --- */
+.table-container {
+  overflow-x: auto;
+}
+
+.request-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.request-table th {
+  background: #f8fafc;
+  padding: 16px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #475569;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.request-table td {
+  padding: 16px;
+  border-bottom: 1px solid #f1f5f9;
+  font-size: 14px;
+  color: #0f172a;
+}
+
+.request-table tbody tr:hover {
+  background: #f8fafc;
+}
+
+.font-medium {
+  font-weight: 500;
+}
+
+.description-cell {
+  max-width: 280px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.py-8 { padding-top: 40px; padding-bottom: 40px; }
+.text-center { text-align: center; }
+
+/* --- Badges --- */
+.badge {
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  display: inline-block;
+}
+
+/* Status Badges */
+.status-open { background: #f1f5f9; color: #475569; }
+.status-assigned { background: #fef9c3; color: #854d0e; }
+.status-completed { background: #dcfce7; color: #166534; }
+
+/* Priority Badges */
+.priority-high { background: #fee2e2; color: #b91c1c; }
+.priority-medium { background: #ffedd5; color: #c2410c; }
+.priority-low { background: #e0f2fe; color: #0369a1; }
+
+/* --- Modal Styling --- */
+.modal-backdrop {
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(15, 23, 42, 0.4);
+  backdrop-filter: blur(2px);
+  z-index: 999;
+}
+
+.modal {
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  pointer-events: none;
+}
+
+.modal-content {
+  width: 100%;
+  max-width: 450px;
+  padding: 24px;
+  pointer-events: auto;
+  animation: slideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.modal-header h3 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #64748b;
+  cursor: pointer;
+}
+
+.close-btn:hover { color: #0f172a; }
+
+/* --- Form Elements --- */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  color: #475569;
+  margin-bottom: 8px;
+}
+
+.ui-input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: inherit;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+}
+
+.ui-input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+textarea.ui-input {
+  resize: vertical;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+/* --- Buttons --- */
+.btn {
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s ease;
+}
+
+.btn-primary {
+  background-color: #0f172a;
+  color: #ffffff;
+}
+
+.btn-primary:hover:not(:disabled) { background-color: #1e293b; }
+.btn-primary:disabled { opacity: 0.6; cursor: not-allowed; }
+
+.btn-secondary {
+  background-color: #f1f5f9;
+  color: #0f172a;
+}
+
+.btn-secondary:hover:not(:disabled) { background-color: #e2e8f0; }
+
+.empty-state {
+  color: #64748b;
+  font-weight: 500;
+}

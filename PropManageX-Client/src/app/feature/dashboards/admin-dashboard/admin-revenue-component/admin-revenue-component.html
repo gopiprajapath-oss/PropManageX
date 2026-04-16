@@ -1,0 +1,103 @@
+<div class="ui-container">
+  
+  @if (activeView() === 'table') {
+    <div class="page-header" style="display: flex; justify-content: space-between; align-items: center;">
+      <div>
+        <h2 class="page-title">Revenue Reports</h2>
+        <p class="page-subtext">Manage institutional and global revenue snapshots.</p>
+      </div>
+      <button class="ui-btn-primary" (click)="generateReport()">+ Generate Report</button>
+      
+    </div>
+
+    @if (isLoading()) {
+      <div class="loading-state">
+        <div class="spinner"></div>
+        <p>Loading reports...</p>
+      </div>
+    } @else if (error()) {
+      <div class="error-state">
+        <div class="error-icon">⚠️</div>
+        <p class="error-text">{{ error() }}</p>
+        <button class="ui-btn-ghost mt-4" (click)="fetchReports()">Try Again</button>
+      </div>
+    } @else {
+      <div class="ui-card table-responsive">
+        <table class="ui-table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Scope</th>
+              <th>Metrics</th>
+              <th>Generated Date</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+
+
+          <!-- <thead>
+            <tr>
+            <th>ID</th>
+             <th>Scope</th>
+              <th>Metrics</th>
+               <th>Generated Date</th>
+             @if (role === 'Finance Analyst') {
+               <th>Actions</th>
+              }
+                 </tr>
+         </thead> -->
+
+
+          <tbody>
+            @for (report of reports(); track report.reportID) {
+              <tr>
+                <td class="muted-cell">#{{ report.reportID }}</td>
+                <td><span class="scope-badge">{{ report.scope }}</span></td>
+                <td>
+                  <div class="metrics-cell">
+                    <span class="metric-pill"><span class="lbl">Occ:</span> {{ parseMetrics(report.metrics).occupancy }}</span>
+                    <span class="metric-pill"><span class="lbl">Yield:</span> {{ parseMetrics(report.metrics).yield }}</span>
+                    <span class="metric-pill"><span class="lbl">Coll:</span> {{ parseMetrics(report.metrics).collection }}</span>
+                  </div>
+                </td>
+                <td>{{ report.generatedDate | date:'mediumDate' }}</td>
+                <td>
+                  <button class="action-btn edit-btn" (click)="editReport(report)" title="Edit">✏️</button>
+                  <button class="action-btn delete-btn" (click)="deleteReport(report.reportID)" title="Delete">🗑️</button>
+                </td>
+              </tr>
+            } @empty {
+              <tr>
+                <td colspan="5" class="empty-state">No reports found.</td>
+              </tr>
+            }
+          </tbody>
+
+
+   
+                   
+
+
+
+        </table>
+      </div>
+    }
+  } 
+  
+  @else if (activeView() === 'create') {
+    <app-revenue-report-create 
+      (saved)="onFormSaved()" 
+      (canceled)="onFormCanceled()">
+    </app-revenue-report-create>
+  } 
+  
+  @else if (activeView() === 'edit') {
+    @if (selectedReport(); as report) {
+      <app-revenue-report-edit 
+        [report]="report" 
+        (saved)="onFormSaved()" 
+        (canceled)="onFormCanceled()">
+      </app-revenue-report-edit>
+    }
+  }
+</div>

@@ -1,0 +1,64 @@
+<div class="landing-layout">
+  <header class="ui-header">
+    <div class="header-container">
+      <a routerLink="/" class="brand-logo">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="logo-icon"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+        PropManageX
+      </a>
+
+
+      <div class="auth-actions">
+        <a routerLink="/login" class="ui-btn btn-ghost">Log in</a>
+        <a routerLink="/register" class="ui-btn btn-primary">Sign up</a>
+      </div>
+
+      <button class="mobile-toggle" (click)="toggleMobileMenu()" aria-label="Toggle Menu">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+
+    @if (isMobileMenuOpen()) {
+      <div class="mobile-nav-menu">
+        <div class="mobile-auth-actions">
+          <a routerLink="/login" class="ui-btn btn-outline" (click)="toggleMobileMenu()">Log in</a>
+          <a routerLink="/register" class="ui-btn btn-primary" (click)="toggleMobileMenu()">Sign up</a>
+        </div>
+      </div>
+    }
+  </header>
+
+  <main class="ui-main">
+    <section class="hero-section">
+      <div class="hero-container">
+        <h1 class="hero-title">
+          Manage properties with <br class="desktop-break" /> enterprise precision.
+        </h1>
+        <p class="hero-subtitle">
+          The complete operating system for real estate developers, brokers, and property managers. Streamline sales, leases, and daily operations in one unified, high-performance platform.
+        </p>
+        <div class="hero-cta-group">
+          <a routerLink="/register" class="ui-btn btn-primary btn-lg">Get Started</a>
+          <a routerLink="/login" class="ui-btn btn-outline btn-lg">Sign In to Dashboard</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="ui-footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <span class="brand-logo-small">PropManageX</span>
+        <p class="footer-copyright">© 2026 PropManageX. All rights reserved.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#" class="footer-link">Privacy Policy</a>
+        <a href="#" class="footer-link">Terms of Service</a>
+        <a href="#" class="footer-link">Contact Support</a>
+      </div>
+    </div>
+  </footer>
+</div>

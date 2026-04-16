@@ -1,0 +1,138 @@
+/* --- Shadcn UI Core Card --- */
+.ui-card {
+  background-color: #ffffff;
+  border: 1px solid #e4e4e7;
+  border-radius: 12px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.ui-card-header {
+  padding: 1.5rem;
+  border-bottom: 1px solid #e4e4e7;
+}
+
+.ui-heading {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #09090b;
+  letter-spacing: -0.02em;
+}
+
+.ui-card-content {
+  padding: 1.5rem;
+}
+
+/* --- Enterprise Table --- */
+.ui-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.ui-table th {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #71717a;
+  border-bottom: 1px solid #e4e4e7;
+}
+
+.ui-table td {
+  padding: 1rem;
+  font-size: 0.875rem;
+  color: #09090b;
+  border-bottom: 1px solid #f4f4f5;
+  vertical-align: middle;
+}
+
+.ui-table-row:hover {
+  background-color: #fafafa;
+}
+
+/* --- Shadcn Buttons --- */
+.ui-btn-outline, .ui-btn-danger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  border: 1px solid #e4e4e7;
+}
+
+.ui-btn-sm {
+  height: 2rem;
+  padding: 0 0.75rem;
+  font-size: 0.75rem;
+}
+
+.ui-btn-outline {
+  background: #ffffff;
+  color: #09090b;
+}
+
+.ui-btn-outline:hover {
+  background: #f4f4f5;
+  border-color: #d1d1d6;
+}
+
+.ui-btn-danger {
+  background: #ffffff;
+  color: #ef4444;
+  border-color: #fecaca;
+}
+
+.ui-btn-danger:hover {
+  background: #fef2f2;
+  border-color: #ef4444;
+}
+
+/* --- Focus States (Double Ring) --- */
+.ui-focus-ring:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #09090b;
+}
+
+/* --- Badges & Indicators --- */
+.ui-badge {
+  padding: 0.125rem 0.625rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  background: #f4f4f5;
+  border: 1px solid #e4e4e7;
+  color: #3f3f46;
+}
+
+.ui-badge-high {
+  background: #09090b;
+  color: #ffffff;
+  border-color: #09090b;
+}
+
+.status-indicator {
+  font-size: 0.875rem;
+  color: #71717a;
+}
+
+.status-in-progress {
+  color: #09090b;
+  font-weight: 500;
+}
+
+/* --- Alerts --- */
+.ui-alert-error {
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #ef4444;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  font-size: 0.875rem;
+}
+
+.font-mono {
+  font-family: 'SFMono-Regular', Consolas, monospace;
+  color: #71717a;
+}

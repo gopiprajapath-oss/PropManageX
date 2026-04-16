@@ -1,0 +1,46 @@
+<div class="page">
+
+  <h2>Contracts</h2>
+
+  <button class="add-btn" (click)="addContract()">+ Add Contract</button>
+
+  <!-- Loading indicator -->
+  <div *ngIf="loading()">Loading contracts...</div>
+
+  <!-- Table only when not loading -->
+  <table *ngIf="!loading() && contracts().length > 0">
+    <thead>
+      <tr>
+        <th>Deal ID</th>
+        <th>Type</th>
+        <th>Start</th>
+        <th>End</th>
+        <th>Value</th>
+        <th>Status</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let c of contracts()">
+        <td>{{ c.dealID }}</td>
+        <td>{{ c.contractType }}</td>
+        <td>{{ c.startDate | date }}</td>
+        <td>{{ c.endDate | date }}</td>
+        <td>{{ c.contractValue }}</td>
+        <td>{{ c.status }}</td>
+
+        <td>
+          <button class="edit" (click)="editContract(c.ContractID)">Edit</button>
+          <button class="delete" (click)="deleteContract(c.ContractID)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Empty state -->
+  <div *ngIf="!loading() && contracts().length === 0">
+    No contracts found.
+  </div>
+
+</div>

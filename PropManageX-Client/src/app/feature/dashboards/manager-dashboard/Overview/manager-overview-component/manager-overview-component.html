@@ -1,0 +1,40 @@
+<section class="ui-card" style="margin-bottom: 20px;">
+  <div class="ui-card-header">
+    <h3 class="ui-heading">Dashboard Overview</h3>
+  </div>
+
+  <div class="ui-card-content">
+    @if (isLoading()) {
+      <div class="loading-state">
+        <p>Loading overview stats...</p>
+      </div>
+    } @else {
+      <div class="stats-grid">
+        <div class="ui-stat">
+          <p>Total Properties</p>
+          <h2>{{ dashboardData()?.totalProperties }}</h2>
+        </div>
+
+        <div class="ui-stat">
+          <p>Total Units</p>
+          <h2>{{ dashboardData()?.totalUnits }}</h2>
+        </div>
+
+        <div class="ui-stat">
+          <p>Occupied Units</p>
+          <h2>{{ dashboardData()?.occupiedUnits }}</h2>
+        </div>
+
+        <div class="ui-stat">
+          <p>Vacant Units</p>
+          <h2>{{ dashboardData()?.vacantUnits }}</h2>
+        </div>
+
+        <div class="ui-stat">
+          <p>Total Revenue</p>
+          <h2>{{ dashboardData()?.totalRevenue | currency : 'INR' }}</h2>
+        </div>
+      </div>
+    }
+  </div>
+</section>

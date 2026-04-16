@@ -1,0 +1,23 @@
+<aside class="ui-sidebar">
+  <div class="sidebar-header">
+    <h3 class="ui-heading text-lg">PropManageX</h3>
+    @if (user()) {
+      <p class="ui-subtext text-xs">{{ user()?.name }} Panel &bull; {{ user()?.role }}</p>
+    }
+  </div>
+
+  <nav class="sidebar-nav">
+    <ul class="menu-list">
+      @for (item of filteredMenu(); track item.path) {
+        <li>
+          <a 
+            [routerLink]="item.path" 
+            routerLinkActive="active" 
+            class="menu-link">
+            {{ item.label }}
+          </a>
+        </li>
+      }
+    </ul>
+  </nav>
+</aside>

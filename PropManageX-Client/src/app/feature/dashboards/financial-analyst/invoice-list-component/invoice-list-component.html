@@ -1,0 +1,67 @@
+<div class="invoice-container">
+  <div class="header">
+    <h2>Invoices</h2>
+    <button (click)="showCreateForm.set(!showCreateForm())" class="btn-primary">
+      {{ showCreateForm() ? 'Cancel' : '+ New Invoice' }}
+    </button>
+  </div>
+
+  @if (showCreateForm()) {
+    <div class="create-form">
+      <input type="number" [(ngModel)]="newInvoice.contractID" placeholder="Contract ID" />
+      <input type="text" [(ngModel)]="newInvoice.period" placeholder="Period (e.g., April 2026)" />
+      <input type="number" [(ngModel)]="newInvoice.amount" placeholder="Amount" />
+      <input type="date" [(ngModel)]="newInvoice.dueDate" />
+      <select [(ngModel)]="newInvoice.status">
+        <option value="Pending">Pending</option>
+        <option value="Open">Open</option>
+        <option value="Closed">Closed</option>
+      </select>
+      <button (click)="onCreateInvoice()" class="btn-success">Save Invoice</button>
+    </div>
+  }
+
+  @if (isLoading()) {
+    <p>Loading invoices...</p>
+  } @else {
+    <table class="invoice-table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Contract</th>
+          <th>Period</th>
+          <th>Amount</th>
+          <th>Due Date</th>
+          <th>Status</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (inv of invoices(); track inv.invoiceID) {
+          <tr>
+            <td class="muted">#{{ inv.invoiceID }}</td>
+            <td>{{ inv.contractID }}</td>
+            <td>{{ inv.period }}</td>
+            <td>{{ inv.amount | currency }}</td>
+            <td>{{ inv.dueDate | date:'shortDate' }}</td>
+            <td>
+              <select [ngModel]="inv.status" (change)="changeStatus(inv, $any($event.target).value)">
+                <option value="Pending">Pending</option>
+                <option value="Open">Open</option>
+                <option value="Closed">Closed</option>
+                <option value="Overdue">Overdue</option>
+              </select>
+            </td>
+            <td>
+              <button (click)="removeInvoice(inv.invoiceID)" class="btn-delete">🗑️</button>
+            </td>
+          </tr>
+        } @empty {
+          <tr>
+            <td colspan="7" class="text-center">No invoices found.</td>
+          </tr>
+        }
+      </tbody>
+    </table>
+  }
+</div>

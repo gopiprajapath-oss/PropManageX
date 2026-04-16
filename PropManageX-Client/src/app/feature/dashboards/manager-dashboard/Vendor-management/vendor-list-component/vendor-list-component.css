@@ -1,0 +1,97 @@
+/* --- Card & Header Alignment --- */
+.ui-card {
+  background: #ffffff;
+  border: 1px solid #e4e4e7;
+  border-radius: 0.75rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.ui-card-header {
+  padding: 1.5rem 1.5rem 1rem 1.5rem; /* Standard alignment */
+  border-bottom: 1px solid #e4e4e7;
+}
+
+/* --- Table Structure --- */
+.ui-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+
+.ui-table th {
+  padding: 0.75rem 1.5rem;
+  text-align: left;
+  font-weight: 500;
+  color: #71717a;
+  border-bottom: 1px solid #e4e4e7;
+  background-color: #fafafa;
+}
+
+.ui-table td {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #e4e4e7;
+  vertical-align: middle;
+  color: #27272a;
+}
+
+/* --- Styled Select Dropdown --- */
+.ui-select {
+  padding: 0.35rem 2rem 0.35rem 0.75rem;
+  font-size: 0.75rem;
+  border: 1px solid #e4e4e7;
+  border-radius: 9999px; /* Pill shape to match buttons */
+  background-color: #ffffff;
+  color: #18181b;
+  cursor: pointer;
+  appearance: none; /* Removes default arrow */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%2371717a'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 1rem;
+}
+
+.ui-select:disabled {
+  background-color: #f4f4f5;
+  color: #a1a1aa;
+  cursor: not-allowed;
+}
+
+/* --- Actions: Monochrome Pill Style --- */
+.row-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.ui-btn-outline, .ui-btn-danger {
+  height: 32px;
+  padding: 0 1rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  border-radius: 9999px; /* Pill */
+  cursor: pointer;
+  transition: all 0.2s;
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid transparent;
+}
+
+.ui-btn-outline {
+  background: #ffffff;
+  border-color: #e4e4e7;
+  color: #18181b;
+}
+
+.ui-btn-outline:hover {
+  background-color: #f4f4f5;
+}
+
+.ui-btn-danger {
+  background: #f4f4f5; /* Light gray base */
+  color: #475569;
+}
+
+.ui-btn-danger:hover {
+  background: #ef4444; /* Turns red on hover */
+  color: #ffffff;
+}

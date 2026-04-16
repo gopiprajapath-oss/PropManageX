@@ -1,0 +1,58 @@
+<div class="property-container">
+ 
+  <div class="header">
+    <h2>Properties</h2>
+
+  </div>
+ 
+  @if (loading()) {
+    <p class="loading">Loading properties...</p>
+  }
+ 
+  @if (!loading()) {
+    <div class="table-wrapper">
+      <table class="ui-table">
+ 
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Location</th>
+            <th>Units</th>
+            <th>Status</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+ 
+        <tbody>
+          @for (property of properties(); track property.propertyID) {
+            <tr>
+              <td>{{ property.name }}</td>
+              <td>{{ property.type }}</td>
+              <td>{{ property.location }}</td>
+              <td>{{ property.totalUnits }}</td>
+              <td>
+                <span class="status">{{ property.status }}</span>
+              </td>
+              <td>
+  <!-- Edit Property (Status only) -->
+  <button [routerLink]="['/agent-dashboard/add-property', property.propertyID]">
+    Edit
+  </button>
+ 
+  <!-- Units -->
+  <button [routerLink]="['/agent-dashboard/properties', property.propertyID, 'units']">
+    Units
+  </button>
+ 
+</td>
+            </tr>
+          }
+        </tbody>
+ 
+      </table>
+    </div>
+  }
+ 
+</div>
+ 

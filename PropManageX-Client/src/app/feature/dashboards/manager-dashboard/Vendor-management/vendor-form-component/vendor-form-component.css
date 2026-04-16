@@ -1,0 +1,135 @@
+/* --- Core Shadcn Variables --- */
+:host {
+  display: block;
+  font-family: 'Inter', -apple-system, sans-serif;
+  --border: #e4e4e7;
+  --input-bg: #ffffff;
+  --radius: 0.5rem;
+}
+
+/* Card Structure */
+.form-panel {
+  max-width: 440px;
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.ui-card-header {
+  padding: 2rem 2rem 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.ui-card-content {
+  padding: 2rem;
+}
+
+/* Typography */
+.ui-heading {
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  color: #09090b;
+}
+
+.ui-label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #18181b;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+/* --- Input Refinements --- */
+.ui-input {
+  height: 42px;
+  padding: 0 0.875rem;
+  font-size: 0.875rem;
+  background-color: var(--input-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+}
+
+.ui-input:focus {
+  outline: none;
+  border-color: #09090b;
+  box-shadow: 0 0 0 2px rgba(9, 9, 11, 0.05);
+}
+
+/* Currency Input Styling */
+.input-with-prefix {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.ui-prefix {
+  position: absolute;
+  left: 0.875rem;
+  color: #71717a;
+  font-size: 0.875rem;
+}
+
+.prefix-input {
+  padding-left: 2rem !important;
+}
+
+/* --- Monochrome Pill Buttons --- */
+.ui-btn {
+  height: 42px;
+  padding: 0 1.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border-radius: 9999px; /* Pill Shape */
+  cursor: pointer;
+  transition: all 0.2s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid transparent;
+}
+
+.ui-btn-primary {
+  background-color: #09090b; /* Solid Black */
+  color: #ffffff;
+}
+
+.ui-btn-primary:hover:not(:disabled) {
+  background-color: #27272a;
+}
+
+.ui-btn-primary:disabled {
+  background-color: #a1a1aa; /* Professional gray for disabled */
+  border-color: #a1a1aa;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.ui-btn-outline {
+  background-color: #ffffff;
+  border: 1px solid var(--border);
+  color: #18181b;
+}
+
+.ui-btn-outline:hover {
+  background-color: #f4f4f5;
+  border-color: #d4d4d8;
+}
+
+/* Error States */
+.input-error {
+  border-color: #ef4444 !important;
+}
+
+.ui-alert-error {
+  padding: 0.75rem 1rem;
+  background-color: #fef2f2;
+  color: #991b1b;
+  border: 1px solid #fecaca;
+  border-radius: var(--radius);
+  font-size: 0.875rem;
+}

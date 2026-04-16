@@ -1,0 +1,85 @@
+<div class="overview-container">
+  <header class="overview-header">
+    <h2 class="page-title">Welcome, {{ userName() }}</h2>
+    <p class="text-muted">Here is your property overview and latest updates.</p>
+  </header>
+
+  @if (isLoading()) {
+    <div class="loading-state">Loading your property details...</div>
+  } @else {
+    
+    @if (role() === 'User') {
+      <div class="welcome-card ui-card">
+        <div class="welcome-content">
+          <div class="icon-wrapper">🏠</div>
+          <h3>Start Your Journey</h3>
+          <p>Explore our verified listings and find the perfect place to rent or buy.</p>
+          <div class="actions">
+            <a routerLink="/user-dashboard/properties" class="btn btn-primary">Explore Properties</a>
+          </div>
+        </div>
+      </div>
+    } 
+    
+    @else if (role() === 'Tenant' || role() === 'Buyer') {
+      
+      @if (overviewData(); as data) {
+        
+        <div class="tenant-grid">
+          <div class="ui-card stat-card">
+            <p class="label">Property</p>
+            <h4>{{ data.propertyName }}</h4>
+            <p class="text-xs text-muted mt-1">{{ data.location }}</p>
+          </div>
+          
+          <div class="ui-card stat-card">
+            <p class="label">Unit</p>
+            <h4>#{{ data.unitNumber }}</h4>
+            <p class="text-xs text-muted mt-1">{{ data.contractType }}</p>
+          </div>
+          
+          <div class="ui-card stat-card">
+            <p class="label">{{ data.contractType === 'Rent' ? 'Monthly Rent' : 'Deal Value' }}</p>
+            <h4>{{ data.contractValue | currency:'INR':'symbol':'1.0-0' }}</h4>
+            <p class="text-xs text-muted mt-1">
+              Valid till {{ data.endDate | date:'mediumDate' }}
+            </p>
+          </div>
+        </div>
+
+        <div class="details-grid">
+          <div class="ui-card list-card">
+            <div class="card-header">
+              <h5>Quick Actions</h5>
+            </div>
+            
+            <div class="list-item">
+              <div class="item-info">
+                <strong>Maintenance</strong>
+                <p>Request repairs for Unit {{ data.unitNumber }}</p>
+              </div>
+              <a routerLink="/user-dashboard/maintenance" class="btn btn-secondary text-sm">Go</a>
+            </div>
+            
+            <div class="list-item">
+              <div class="item-info">
+                <strong>Agreements</strong>
+                <p>Review and manage your contracts</p>
+              </div>
+              <a routerLink="/user-dashboard/agreements" class="btn btn-secondary text-sm">Go</a>
+            </div>
+          </div>
+        </div>
+
+      } @else {
+        <div class="welcome-card ui-card">
+          <div class="welcome-content">
+            <div class="icon-wrapper">📄</div>
+            <h3>No Active Contracts</h3>
+            <p>You currently do not have any active properties assigned to your account. Your dashboard will populate once your deal is finalized.</p>
+          </div>
+        </div>
+      }
+    }
+  }
+</div>

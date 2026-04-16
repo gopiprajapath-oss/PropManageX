@@ -1,0 +1,173 @@
+:host {
+  --background: hsl(0 0% 100%);
+  --foreground: hsl(240 10% 3.9%);
+  --card: hsl(0 0% 100%);
+  --card-foreground: hsl(240 10% 3.9%);
+  --border: hsl(240 5.9% 90%);
+  --input: hsl(240 5.9% 90%);
+  --primary: hsl(240 5.9% 10%);
+  --primary-foreground: hsl(0 0% 98%);
+  --muted: hsl(240 4.8% 95.9%);
+  --muted-foreground: hsl(240 3.8% 46.1%);
+  --radius: 0.5rem;
+}
+
+.invoice-container {
+  font-family: 'Inter', -apple-system, sans-serif;
+  color: var(--foreground);
+  background-color: var(--background);
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  animation: fadeIn 0.4s ease-out;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 1rem;
+}
+
+.header h2 {
+  font-size: 1.875rem;
+  font-weight: 700;
+  letter-spacing: -0.05em;
+  margin: 0;
+}
+
+.create-form {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  margin-bottom: 2.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+  align-items: flex-end;
+}
+
+.create-form input, 
+.create-form select {
+  height: 2.5rem;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--input);
+  border-radius: calc(var(--radius) - 2px);
+  font-size: 0.875rem;
+  background: transparent;
+  transition: border-color 0.2s;
+}
+
+.create-form input:focus, 
+.create-form select:focus {
+  outline: none;
+  border-color: var(--primary);
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: var(--primary-foreground);
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius);
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.btn-success {
+  background: var(--primary);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius);
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn-delete {
+  background: transparent;
+  color: var(--muted-foreground);
+  border: 1px solid var(--border);
+  padding: 0.4rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-delete:hover {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+}
+
+.invoice-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+  text-align: left;
+}
+
+.invoice-table thead tr {
+  border-bottom: 1px solid var(--border);
+}
+
+.invoice-table th {
+  padding: 0.75rem 1rem;
+  font-weight: 500;
+  color: var(--muted-foreground);
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+}
+
+.invoice-table td {
+  padding: 1rem;
+  border-bottom: 1px solid var(--border);
+  vertical-align: middle;
+}
+
+.invoice-table tbody tr:hover {
+  background-color: var(--muted);
+}
+
+.invoice-table .muted {
+  color: var(--muted-foreground);
+  font-family: ui-monospace, monospace;
+}
+
+.invoice-table select {
+  background: var(--muted);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.invoice-table select:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+.text-center { 
+  text-align: center;
+  padding: 3rem; 
+  color: var(--muted-foreground); 
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+  .create-form { grid-template-columns: 1fr; }
+}
