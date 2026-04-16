@@ -1,0 +1,6 @@
+@PropManageX_HostAddress = http://localhost:5157
+
+GET {{PropManageX_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

@@ -1,0 +1,279 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\2475929\\source\\repos\\PropManageX\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8D9E25B2-CA38-253E-3BA0-54D7AD6CD5FA}|PropManageX\\PropManageX.csproj|c:\\users\\2475929\\source\\repos\\propmanagex\\propmanagex\\controllers\\unitcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D9E25B2-CA38-253E-3BA0-54D7AD6CD5FA}|PropManageX\\PropManageX.csproj|solutionrelative:propmanagex\\controllers\\unitcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D9E25B2-CA38-253E-3BA0-54D7AD6CD5FA}|PropManageX\\PropManageX.csproj|c:\\users\\2475929\\source\\repos\\propmanagex\\propmanagex\\services\\tenantoperationsandmaintainencerequest\\dashboardservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D9E25B2-CA38-253E-3BA0-54D7AD6CD5FA}|PropManageX\\PropManageX.csproj|solutionrelative:propmanagex\\services\\tenantoperationsandmaintainencerequest\\dashboardservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D9E25B2-CA38-253E-3BA0-54D7AD6CD5FA}|PropManageX\\PropManageX.csproj|c:\\users\\2475929\\source\\repos\\propmanagex\\propmanagex\\services\\tenantoperationsandmaintainencerequest\\idashboardservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D9E25B2-CA38-253E-3BA0-54D7AD6CD5FA}|PropManageX\\PropManageX.csproj|solutionrelative:propmanagex\\services\\tenantoperationsandmaintainencerequest\\idashboardservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D9E25B2-CA38-253E-3BA0-54D7AD6CD5FA}|PropManageX\\PropManageX.csproj|c:\\users\\2475929\\source\\repos\\propmanagex\\propmanagex\\services\\propertylistinginventorymanagement\\unit\\iunitservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D9E25B2-CA38-253E-3BA0-54D7AD6CD5FA}|PropManageX\\PropManageX.csproj|solutionrelative:propmanagex\\services\\propertylistinginventorymanagement\\unit\\iunitservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D9E25B2-CA38-253E-3BA0-54D7AD6CD5FA}|PropManageX\\PropManageX.csproj|c:\\users\\2475929\\source\\repos\\propmanagex\\propmanagex\\services\\propertylistinginventorymanagement\\unit\\unitservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D9E25B2-CA38-253E-3BA0-54D7AD6CD5FA}|PropManageX\\PropManageX.csproj|solutionrelative:propmanagex\\services\\propertylistinginventorymanagement\\unit\\unitservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D9E25B2-CA38-253E-3BA0-54D7AD6CD5FA}|PropManageX\\PropManageX.csproj|c:\\users\\2475929\\source\\repos\\propmanagex\\propmanagex\\services\\tenantoperationsandmaintainencerequest\\maintenancerequest\\maintenancerequestservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D9E25B2-CA38-253E-3BA0-54D7AD6CD5FA}|PropManageX\\PropManageX.csproj|solutionrelative:propmanagex\\services\\tenantoperationsandmaintainencerequest\\maintenancerequest\\maintenancerequestservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D9E25B2-CA38-253E-3BA0-54D7AD6CD5FA}|PropManageX\\PropManageX.csproj|c:\\users\\2475929\\source\\repos\\propmanagex\\propmanagex\\services\\tenantoperationsandmaintainencerequest\\maintenancerequest\\imaintenancerequestservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D9E25B2-CA38-253E-3BA0-54D7AD6CD5FA}|PropManageX\\PropManageX.csproj|solutionrelative:propmanagex\\services\\tenantoperationsandmaintainencerequest\\maintenancerequest\\imaintenancerequestservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D9E25B2-CA38-253E-3BA0-54D7AD6CD5FA}|PropManageX\\PropManageX.csproj|c:\\users\\2475929\\source\\repos\\propmanagex\\propmanagex\\controllers\\maintenancerequestcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D9E25B2-CA38-253E-3BA0-54D7AD6CD5FA}|PropManageX\\PropManageX.csproj|solutionrelative:propmanagex\\controllers\\maintenancerequestcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D9E25B2-CA38-253E-3BA0-54D7AD6CD5FA}|PropManageX\\PropManageX.csproj|c:\\users\\2475929\\source\\repos\\propmanagex\\propmanagex\\controllers\\revenuereportcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D9E25B2-CA38-253E-3BA0-54D7AD6CD5FA}|PropManageX\\PropManageX.csproj|solutionrelative:propmanagex\\controllers\\revenuereportcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D9E25B2-CA38-253E-3BA0-54D7AD6CD5FA}|PropManageX\\PropManageX.csproj|c:\\users\\2475929\\source\\repos\\propmanagex\\propmanagex\\models\\entities\\contractmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D9E25B2-CA38-253E-3BA0-54D7AD6CD5FA}|PropManageX\\PropManageX.csproj|solutionrelative:propmanagex\\models\\entities\\contractmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D9E25B2-CA38-253E-3BA0-54D7AD6CD5FA}|PropManageX\\PropManageX.csproj|c:\\users\\2475929\\source\\repos\\propmanagex\\propmanagex\\models\\entities\\leadmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D9E25B2-CA38-253E-3BA0-54D7AD6CD5FA}|PropManageX\\PropManageX.csproj|solutionrelative:propmanagex\\models\\entities\\leadmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D9E25B2-CA38-253E-3BA0-54D7AD6CD5FA}|PropManageX\\PropManageX.csproj|c:\\users\\2475929\\source\\repos\\propmanagex\\propmanagex\\models\\entities\\dealmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D9E25B2-CA38-253E-3BA0-54D7AD6CD5FA}|PropManageX\\PropManageX.csproj|solutionrelative:propmanagex\\models\\entities\\dealmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D9E25B2-CA38-253E-3BA0-54D7AD6CD5FA}|PropManageX\\PropManageX.csproj|c:\\users\\2475929\\source\\repos\\propmanagex\\propmanagex\\models\\entities\\usermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D9E25B2-CA38-253E-3BA0-54D7AD6CD5FA}|PropManageX\\PropManageX.csproj|solutionrelative:propmanagex\\models\\entities\\usermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D9E25B2-CA38-253E-3BA0-54D7AD6CD5FA}|PropManageX\\PropManageX.csproj|c:\\users\\2475929\\source\\repos\\propmanagex\\propmanagex\\models\\context\\propmanagexcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D9E25B2-CA38-253E-3BA0-54D7AD6CD5FA}|PropManageX\\PropManageX.csproj|solutionrelative:propmanagex\\models\\context\\propmanagexcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D9E25B2-CA38-253E-3BA0-54D7AD6CD5FA}|PropManageX\\PropManageX.csproj|c:\\users\\2475929\\source\\repos\\propmanagex\\propmanagex\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D9E25B2-CA38-253E-3BA0-54D7AD6CD5FA}|PropManageX\\PropManageX.csproj|solutionrelative:propmanagex\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UnitController.cs",
+              "DocumentMoniker": "C:\\Users\\2475929\\source\\repos\\PropManageX\\PropManageX\\Controllers\\UnitController.cs",
+              "RelativeDocumentMoniker": "PropManageX\\Controllers\\UnitController.cs",
+              "ToolTip": "C:\\Users\\2475929\\source\\repos\\PropManageX\\PropManageX\\Controllers\\UnitController.cs",
+              "RelativeToolTip": "PropManageX\\Controllers\\UnitController.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAkwB0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-16T12:09:07.224Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IDashboardService.cs",
+              "DocumentMoniker": "C:\\Users\\2475929\\source\\repos\\PropManageX\\PropManageX\\Services\\TenantOperationsAndMaintainenceRequest\\IDashboardService.cs",
+              "RelativeDocumentMoniker": "PropManageX\\Services\\TenantOperationsAndMaintainenceRequest\\IDashboardService.cs",
+              "ToolTip": "C:\\Users\\2475929\\source\\repos\\PropManageX\\PropManageX\\Services\\TenantOperationsAndMaintainenceRequest\\IDashboardService.cs",
+              "RelativeToolTip": "PropManageX\\Services\\TenantOperationsAndMaintainenceRequest\\IDashboardService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-16T10:57:05.798Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DashboardService.cs",
+              "DocumentMoniker": "C:\\Users\\2475929\\source\\repos\\PropManageX\\PropManageX\\Services\\TenantOperationsAndMaintainenceRequest\\DashboardService.cs",
+              "RelativeDocumentMoniker": "PropManageX\\Services\\TenantOperationsAndMaintainenceRequest\\DashboardService.cs",
+              "ToolTip": "C:\\Users\\2475929\\source\\repos\\PropManageX\\PropManageX\\Services\\TenantOperationsAndMaintainenceRequest\\DashboardService.cs",
+              "RelativeToolTip": "PropManageX\\Services\\TenantOperationsAndMaintainenceRequest\\DashboardService.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAuwCEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-16T10:56:12.136Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IUnitService.cs",
+              "DocumentMoniker": "C:\\Users\\2475929\\source\\repos\\PropManageX\\PropManageX\\Services\\PropertyListingInventoryManagement\\Unit\\IUnitService.cs",
+              "RelativeDocumentMoniker": "PropManageX\\Services\\PropertyListingInventoryManagement\\Unit\\IUnitService.cs",
+              "ToolTip": "C:\\Users\\2475929\\source\\repos\\PropManageX\\PropManageX\\Services\\PropertyListingInventoryManagement\\Unit\\IUnitService.cs",
+              "RelativeToolTip": "PropManageX\\Services\\PropertyListingInventoryManagement\\Unit\\IUnitService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-16T04:13:18.097Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UnitService.cs",
+              "DocumentMoniker": "C:\\Users\\2475929\\source\\repos\\PropManageX\\PropManageX\\Services\\PropertyListingInventoryManagement\\Unit\\UnitService.cs",
+              "RelativeDocumentMoniker": "PropManageX\\Services\\PropertyListingInventoryManagement\\Unit\\UnitService.cs",
+              "ToolTip": "C:\\Users\\2475929\\source\\repos\\PropManageX\\PropManageX\\Services\\PropertyListingInventoryManagement\\Unit\\UnitService.cs",
+              "RelativeToolTip": "PropManageX\\Services\\PropertyListingInventoryManagement\\Unit\\UnitService.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAUwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-16T04:13:10.158Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MaintenanceRequestService.cs",
+              "DocumentMoniker": "C:\\Users\\2475929\\source\\repos\\PropManageX\\PropManageX\\Services\\TenantOperationsAndMaintainenceRequest\\MaintenanceRequest\\MaintenanceRequestService.cs",
+              "RelativeDocumentMoniker": "PropManageX\\Services\\TenantOperationsAndMaintainenceRequest\\MaintenanceRequest\\MaintenanceRequestService.cs",
+              "ToolTip": "C:\\Users\\2475929\\source\\repos\\PropManageX\\PropManageX\\Services\\TenantOperationsAndMaintainenceRequest\\MaintenanceRequest\\MaintenanceRequestService.cs",
+              "RelativeToolTip": "PropManageX\\Services\\TenantOperationsAndMaintainenceRequest\\MaintenanceRequest\\MaintenanceRequestService.cs",
+              "ViewState": "AgIAAG8AAAAAAAAAAAAuwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-16T03:54:14.45Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "IMaintenanceRequestService.cs",
+              "DocumentMoniker": "C:\\Users\\2475929\\source\\repos\\PropManageX\\PropManageX\\Services\\TenantOperationsAndMaintainenceRequest\\MaintenanceRequest\\IMaintenanceRequestService.cs",
+              "RelativeDocumentMoniker": "PropManageX\\Services\\TenantOperationsAndMaintainenceRequest\\MaintenanceRequest\\IMaintenanceRequestService.cs",
+              "ToolTip": "C:\\Users\\2475929\\source\\repos\\PropManageX\\PropManageX\\Services\\TenantOperationsAndMaintainenceRequest\\MaintenanceRequest\\IMaintenanceRequestService.cs",
+              "RelativeToolTip": "PropManageX\\Services\\TenantOperationsAndMaintainenceRequest\\MaintenanceRequest\\IMaintenanceRequestService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-16T03:53:22.99Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "MaintenanceRequestController.cs",
+              "DocumentMoniker": "C:\\Users\\2475929\\source\\repos\\PropManageX\\PropManageX\\Controllers\\MaintenanceRequestController.cs",
+              "RelativeDocumentMoniker": "PropManageX\\Controllers\\MaintenanceRequestController.cs",
+              "ToolTip": "C:\\Users\\2475929\\source\\repos\\PropManageX\\PropManageX\\Controllers\\MaintenanceRequestController.cs",
+              "RelativeToolTip": "PropManageX\\Controllers\\MaintenanceRequestController.cs",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAuwBQAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-16T03:53:01.66Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "RevenueReportController.cs",
+              "DocumentMoniker": "C:\\Users\\2475929\\source\\repos\\PropManageX\\PropManageX\\Controllers\\RevenueReportController.cs",
+              "RelativeDocumentMoniker": "PropManageX\\Controllers\\RevenueReportController.cs",
+              "ToolTip": "C:\\Users\\2475929\\source\\repos\\PropManageX\\PropManageX\\Controllers\\RevenueReportController.cs",
+              "RelativeToolTip": "PropManageX\\Controllers\\RevenueReportController.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAuwB8AAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-15T17:31:57.577Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ContractModel.cs",
+              "DocumentMoniker": "C:\\Users\\2475929\\source\\repos\\PropManageX\\PropManageX\\Models\\Entities\\ContractModel.cs",
+              "RelativeDocumentMoniker": "PropManageX\\Models\\Entities\\ContractModel.cs",
+              "ToolTip": "C:\\Users\\2475929\\source\\repos\\PropManageX\\PropManageX\\Models\\Entities\\ContractModel.cs",
+              "RelativeToolTip": "PropManageX\\Models\\Entities\\ContractModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-15T13:58:13.552Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "LeadModel.cs",
+              "DocumentMoniker": "C:\\Users\\2475929\\source\\repos\\PropManageX\\PropManageX\\Models\\Entities\\LeadModel.cs",
+              "RelativeDocumentMoniker": "PropManageX\\Models\\Entities\\LeadModel.cs",
+              "ToolTip": "C:\\Users\\2475929\\source\\repos\\PropManageX\\PropManageX\\Models\\Entities\\LeadModel.cs",
+              "RelativeToolTip": "PropManageX\\Models\\Entities\\LeadModel.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-15T13:40:45.948Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "DealModel.cs",
+              "DocumentMoniker": "C:\\Users\\2475929\\source\\repos\\PropManageX\\PropManageX\\Models\\Entities\\DealModel.cs",
+              "RelativeDocumentMoniker": "PropManageX\\Models\\Entities\\DealModel.cs",
+              "ToolTip": "C:\\Users\\2475929\\source\\repos\\PropManageX\\PropManageX\\Models\\Entities\\DealModel.cs",
+              "RelativeToolTip": "PropManageX\\Models\\Entities\\DealModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-15T13:39:18.264Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "UserModel.cs",
+              "DocumentMoniker": "C:\\Users\\2475929\\source\\repos\\PropManageX\\PropManageX\\Models\\Entities\\UserModel.cs",
+              "RelativeDocumentMoniker": "PropManageX\\Models\\Entities\\UserModel.cs",
+              "ToolTip": "C:\\Users\\2475929\\source\\repos\\PropManageX\\PropManageX\\Models\\Entities\\UserModel.cs",
+              "RelativeToolTip": "PropManageX\\Models\\Entities\\UserModel.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAA0wBIAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-15T13:36:45.36Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "PropManageXContext.cs",
+              "DocumentMoniker": "C:\\Users\\2475929\\source\\repos\\PropManageX\\PropManageX\\Models\\Context\\PropManageXContext.cs",
+              "RelativeDocumentMoniker": "PropManageX\\Models\\Context\\PropManageXContext.cs",
+              "ToolTip": "C:\\Users\\2475929\\source\\repos\\PropManageX\\PropManageX\\Models\\Context\\PropManageXContext.cs",
+              "RelativeToolTip": "PropManageX\\Models\\Context\\PropManageXContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-15T11:44:31.541Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\2475929\\source\\repos\\PropManageX\\PropManageX\\Program.cs",
+              "RelativeDocumentMoniker": "PropManageX\\Program.cs",
+              "ToolTip": "C:\\Users\\2475929\\source\\repos\\PropManageX\\PropManageX\\Program.cs",
+              "RelativeToolTip": "PropManageX\\Program.cs",
+              "ViewState": "AgIAADAAAAAAAAAAAAAAAGAAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-15T11:41:03.102Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
